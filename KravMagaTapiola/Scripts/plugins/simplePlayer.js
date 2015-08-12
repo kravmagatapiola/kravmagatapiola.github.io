@@ -15,15 +15,15 @@ window.onYouTubeIframeAPIReady = function() {
 		.done(function( script, textStatus ) {
 	});
 
-	$.fn.simplePlayer = function() {
+	$.fn.simplePlayer = function(options) {
 
 		var	video = $(this);
 
 		var play = $('<div />', { id: 'play' }).hide();
 
 		var defaults = {
-				autoplay: 1,
-				autohide: 1,
+		    autoplay: options && options.autoplay != null ? options.autoplay : 1,
+				autohide: options && options.autohide != null ? options.autohide : 1,
 				border: 0,
 				wmode: 'opaque',
 				enablejsapi: 1,

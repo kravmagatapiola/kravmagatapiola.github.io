@@ -1,0 +1,49 @@
+﻿<div class="section">
+    <div class="container">
+        <h1 class="text-center title" id="information">Tietoa</h1>
+        <div class="separator"></div>
+        <p class="lead text-center">
+            Krav Maga on israelilainen lähitaistelu- ja itsepuolustusjärjestelmä
+        </p>
+        <br>
+        <div class="row object-non-visible" data-animation-effect="fadeIn">
+            <div class="col-md-12">
+
+                <!-- isotope filters start -->
+                <div class="filters text-center">
+                    <ul class="nav nav-pills">
+                        <li class="active"><a href="#" data-filter="*">Kaikki</a></li>
+                        <li><a href="#" data-filter=".kravmaga">Krav Maga</a></li>
+                        <li><a href="#" data-filter=".liitot">Toiminta</a></li>
+                    </ul>
+                </div>
+                <div class="isotope-container row grid-space-20">
+                    <div class="col-sm-6 col-md-4 isotope-item liitot">
+                        @Html.Partial("_FEKM")
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 isotope-item liitot">
+                        @Html.Partial("_PKMI")
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 isotope-item liitot">
+                        @Html.Partial("_Levels")
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 isotope-item kravmaga">
+                        @Html.Partial("_KravMaga")
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 isotope-item kravmaga">
+                        @Html.Partial("_SelfDefence")
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 isotope-item kravmaga">
+                        @Html.Partial("_Combat")
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

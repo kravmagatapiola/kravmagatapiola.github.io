@@ -204,7 +204,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\font-awesome\css\font-awesome.css" />
     <Content Include="fonts\font-awesome\css\font-awesome.min.css" />
-    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Images\accent.png" />
@@ -231,7 +231,7 @@
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
     <Content Include="Images\play-button.png" />
-    <Content Include="Images\portfolio-1.jpg" />
+    <Content Include="Images\douieb.jpg" />
     <Content Include="Images\portfolio-10.jpg" />
     <Content Include="Images\portfolio-11.jpg" />
     <Content Include="Images\portfolio-12.jpg" />
@@ -247,14 +247,16 @@
     <Content Include="Images\testimonial-1.png" />
     <Content Include="Images\testimonial-2.png" />
     <Content Include="Images\testimonial-3.png" />
+    <Content Include="Images\km.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\custom.less" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\fontawesome-webfont.eot" />
-    <Content Include="fonts\fontawesome-webfont.ttf" />
-    <Content Include="fonts\fontawesome-webfont.woff" />
-    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="App_Code\HtmlHelpers.cshtml" />
     <None Include="Properties\PublishProfiles\kravmagatapiola.pubxml" />
     <Content Include="Scripts\custom.js" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
@@ -301,6 +303,17 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="Views\Home\_KravMaga.cshtml" />
+    <Content Include="Views\Home\_Principles.cshtml" />
+    <Content Include="Views\Home\_PKMI.cshtml" />
+    <Content Include="Views\Home\_Gear.cshtml" />
+    <Content Include="Views\Home\_FEKM.cshtml" />
+    <Content Include="Views\Home\_Levels.cshtml" />
+    <Content Include="Views\Home\_Club.cshtml" />
+    <Content Include="Views\Home\_Training.cshtml" />
+    <Content Include="Views\Home\_SelfDefence.cshtml" />
+    <Content Include="Views\Home\_Combat.cshtml" />
+    <Content Include="Views\Home\_Information.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
