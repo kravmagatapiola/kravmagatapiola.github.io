@@ -192,6 +192,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Support\HtmlHelpers.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\animate.css" />
@@ -258,7 +259,6 @@
     <Content Include="fonts\font-awesome\fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\font-awesome\fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\font-awesome\fonts\FontAwesome.otf" />
-    <Content Include="App_Code\HtmlHelpers.cshtml" />
     <None Include="Properties\PublishProfiles\kravmagatapiola.pubxml" />
     <Content Include="Scripts\custom.js" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
