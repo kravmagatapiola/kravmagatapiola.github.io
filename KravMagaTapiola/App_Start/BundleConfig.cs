@@ -49,7 +49,7 @@ namespace KravMagaTapiola
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                  "~/Content/bootstrap.css",
-                 "~/fonts/font-awesome/css/font-awesome.css",
+                 "~/Content/font-awesome.css",
                  "~/Content/animate.css",
                  "~/Content/animations.css",
                  "~/Content/Site.css"));
