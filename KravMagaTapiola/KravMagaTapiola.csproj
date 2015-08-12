@@ -218,6 +218,7 @@
     <Content Include="Images\client-4.png" />
     <Content Include="Images\client-5.png" />
     <Content Include="Images\client-6.png" />
+    <Content Include="Images\defence.jpg" />
     <Content Include="Images\heroAccent.png" />
     <Content Include="Images\logo.png" />
     <Content Include="Images\orderedList0.png" />
@@ -244,6 +245,7 @@
     <Content Include="Images\portfolio-8.jpg" />
     <Content Include="Images\portfolio-9.jpg" />
     <Content Include="Images\screenshot.jpg" />
+    <Content Include="Images\soldiers.jpg" />
     <Content Include="Images\testimonial-1.png" />
     <Content Include="Images\testimonial-2.png" />
     <Content Include="Images\testimonial-3.png" />
