@@ -210,6 +210,7 @@
     <Content Include="Global.asax" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\banner.jpg" />
+    <Content Include="Images\belt.jpg" />
     <Content Include="Images\bg-image-1.jpg" />
     <Content Include="Images\bg-image-2.jpg" />
     <Content Include="Images\bullet.png" />
@@ -221,6 +222,7 @@
     <Content Include="Images\client-6.png" />
     <Content Include="Images\defence.jpg" />
     <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\km_action.jpg" />
     <Content Include="Images\logo.png" />
     <Content Include="Images\orderedList0.png" />
     <Content Include="Images\orderedList1.png" />
@@ -251,6 +253,7 @@
     <Content Include="Images\testimonial-2.png" />
     <Content Include="Images\testimonial-3.png" />
     <Content Include="Images\km.png" />
+    <Content Include="Images\km_musta.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\custom.less" />
