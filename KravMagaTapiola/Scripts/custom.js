@@ -12,7 +12,7 @@ $(document).ready(function () {
         $(e.target).find("iframe").attr("src", $(e.target).find("iframe").attr("src"));
     });
     $("#eventlist").gCalReader({
-        calendarId: "kravmagatapiola@gmail.com",
+        calendarId: "jsi7t3pgbtk0qoad3j0mvo7qn8@group.calendar.google.com",
         apiKey: "AIzaSyAVhU0GdCZQidylxz7whIln82rWtZ4cIDQ",
         sortDescending: false,
         maxEvents: 4,
