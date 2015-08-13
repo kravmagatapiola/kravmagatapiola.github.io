@@ -9,7 +9,6 @@
 $(document).ready(function () {
     $("#video").simplePlayer();
     $(".modal").on('hidden.bs.modal', function (e) {
-        
         $(e.target).find("iframe").attr("src", $(e.target).find("iframe").attr("src"));
     });
     $("#eventlist").gCalReader({
