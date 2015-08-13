@@ -19,14 +19,37 @@
     <div class="col-md-6">
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
             <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading0">
+                    <h4 class="panel-title">
+                        <a class="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapse0" aria-expanded="true" aria-controls="collapse0">
+                            Miten aloitan?
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse0" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading0">
+                    <div class="panel-body">
+                        <p>
+                            Tule peruskurssin aloituspäivänä noin 20 minuuttia ennen treenien alkamista paikalle, jotta paperityöt saadaan tehtyä ja pääset aloittaamaan treenit ajoissa.
+                            <ul><li>Jos peruskurssin aloituspäivä on jo mennyt, niin ota yhteyttä sähköpostilla, jotta saadaan katsottua ehtisitkö vielä kurssille mukaan.</li></ul>
+                        </p>
+                        <p>Paperitöiden jälkeen vaihda pukuhuoneessa sisäliikuntakamppeet yllesi, poista korut ja sormukset. Ota tavarasi mukaan treenisaliin.</p>
+                        <p>
+                            Ota treeneihin mukaan normaali sisäliikuntavarustus ja juomapullo sekä reipasta liikuntahenkeä.
+                            Jos haluat käydä treenien jälkeen suihkussa, niin varaa mukaan myös suihkukamppeet - hiki tulee varmasti! 
+                            Tuulimäen Urheiluhallissa on erinomaiset pukuhuoneet ja suihkutilat.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="headingOne">
                     <h4 class="panel-title">
-                        <a class="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                             Harjoitusasu, suojat ja varusteet
                         </a>
                     </h4>
                 </div>
-                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                     <div class="panel-body">
                         @Html.Partial("_Gear")
                     </div>
