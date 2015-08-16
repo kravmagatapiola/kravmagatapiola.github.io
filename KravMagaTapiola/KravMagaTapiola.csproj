@@ -221,9 +221,12 @@
     <Content Include="Images\client-5.png" />
     <Content Include="Images\client-6.png" />
     <Content Include="Images\defence.jpg" />
+    <Content Include="Images\Hannu.jpg" />
     <Content Include="Images\heroAccent.png" />
     <Content Include="Images\km_action.jpg" />
     <Content Include="Images\logo.png" />
+    <Content Include="Images\Mika.jpg" />
+    <Content Include="Images\Mikko.jpg" />
     <Content Include="Images\orderedList0.png" />
     <Content Include="Images\orderedList1.png" />
     <Content Include="Images\orderedList2.png" />
@@ -250,6 +253,7 @@
     <Content Include="Images\sali.jpg" />
     <Content Include="Images\screenshot.jpg" />
     <Content Include="Images\soldiers.jpg" />
+    <Content Include="Images\Teemu.jpg" />
     <Content Include="Images\testimonial-1.png" />
     <Content Include="Images\testimonial-2.png" />
     <Content Include="Images\testimonial-3.png" />
