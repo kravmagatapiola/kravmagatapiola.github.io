@@ -9,8 +9,7 @@
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,300&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Raleway:700,400,300" rel="stylesheet" type="text/css">
     @Styles.Render("~/Content/css", "~/content/custom.less")
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery", "~/bundles/modernizr")
 </head>
 <body class="no-trans">
     <!-- scrollToTop -->
@@ -24,7 +23,7 @@
     <header class="header fixed clearfix navbar navbar-fixed-top">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-3">
 
                     <!-- header-left start -->
                     <!-- ================ -->
@@ -39,7 +38,7 @@
                     <!-- header-left end -->
 
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-9">
 
                     <!-- header-right start -->
                     <!-- ================ -->
@@ -69,6 +68,7 @@
                                         <ul class="nav navbar-nav navbar-right">
                                             <li><a href="#seura">Treenit</a></li>
                                             <li><a href="#tietoa">Periaatteet</a></li>
+                                            <li><a href="#videos">Videot</a></li>
                                             <li><a href="#information">Krav Maga</a></li>
                                             <li><a href="#contact">Yhteystiedot</a></li>
                                         </ul>
@@ -161,8 +161,7 @@
 
     </footer>
     <!-- footer end -->
-    @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/Scripts/site")
+    @Scripts.Render("~/bundles/bootstrap", "~/Scripts/site")
 
     @RenderSection("Scripts", required: false)
     <script>

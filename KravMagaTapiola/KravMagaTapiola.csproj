@@ -201,6 +201,10 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\plugins\light-gallery\css\lightGallery.css" />
+    <Content Include="Content\plugins\light-gallery\fonts\Slide-icons.dev.svg" />
+    <Content Include="Content\plugins\light-gallery\fonts\Slide-icons.svg" />
+    <Content Include="Content\plugins\light-gallery\img\loading.gif" />
     <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
     <Content Include="Content\font-awesome.css" />
@@ -253,12 +257,13 @@
     <Content Include="Images\sali.jpg" />
     <Content Include="Images\screenshot.jpg" />
     <Content Include="Images\soldiers.jpg" />
+    <Content Include="Images\teaser1.jpg" />
+    <Content Include="Images\teaser2.jpg" />
+    <Content Include="Images\teaser3.jpg" />
     <Content Include="Images\Teemu.jpg" />
-    <Content Include="Images\testimonial-1.png" />
-    <Content Include="Images\testimonial-2.png" />
-    <Content Include="Images\testimonial-3.png" />
     <Content Include="Images\km.png" />
     <Content Include="Images\km_musta.png" />
+    <Content Include="Images\treeniopaste.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\custom.less" />
@@ -267,6 +272,9 @@
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="Content\plugins\light-gallery\fonts\Slide-icons.eot" />
+    <Content Include="Content\plugins\light-gallery\fonts\Slide-icons.ttf" />
+    <Content Include="Content\plugins\light-gallery\fonts\Slide-icons.woff" />
     <None Include="Properties\PublishProfiles\kravmagatapiola.pubxml" />
     <Content Include="Scripts\custom.js" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
@@ -284,6 +292,8 @@
     <Content Include="Scripts\plugins\jquery.backstretch.min.js" />
     <Content Include="Scripts\plugins\jquery.js" />
     <Content Include="Scripts\plugins\jquery.min.js" />
+    <Content Include="Scripts\plugins\light-gallery\lightGallery.js" />
+    <Content Include="Scripts\plugins\light-gallery\lightGallery.min.js" />
     <Content Include="Scripts\plugins\modernizr.js" />
     <Content Include="Scripts\plugins\simplePlayer.js" />
     <Content Include="Scripts\respond.js" />

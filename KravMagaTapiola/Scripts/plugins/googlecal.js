@@ -42,9 +42,6 @@
 					if(location) {
 						s +='<div class="location"> Paikka: ' + location + '</div>';
 					}
-					if(description) {
-						s +='<div class="description">'+ description +'</div>';
-					}
 					$($div).append('<li>' + s + '</li>');
         });
       },

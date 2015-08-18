@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
 namespace KravMagaTapiola
 {
-    public class BundleConfig
+    public static class BundleConfig
     {
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
@@ -44,6 +41,7 @@ namespace KravMagaTapiola
             "~/Scripts/plugins/jquery.appear.js", 
             "~/Scripts/plugins/simplePlayer.js", 
             "~/Scripts/plugins/googlecal.js",
+            "~/Scripts/plugins/light-gallery/lightGallery.js",
             "~/Scripts/template.js", 
             "~/Scripts/custom.js"));
 
@@ -52,6 +50,7 @@ namespace KravMagaTapiola
                  "~/Content/font-awesome.css",
                  "~/Content/animate.css",
                  "~/Content/animations.css",
+                 "~/Content/plugins/light-gallery/css/lightGallery.css",
                  "~/Content/Site.css"));
         }
     }

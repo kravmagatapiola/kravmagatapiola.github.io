@@ -1,14 +1,32 @@
-/* Theme Name: Worthy - Free Powerful Theme by HtmlCoder
- * Author:HtmlCoder
- * Author URI:http://www.htmlcoder.me
- * Version:1.0.0
- * Created:November 2014
- * License: Creative Commons Attribution 3.0 License (https://creativecommons.org/licenses/by/3.0/)
- * File Description: Place here your custom scripts
- */
 $(document).ready(function () {
     $("#video").simplePlayer();
-    $(".modal").on('hidden.bs.modal', function (e) {
+    function pauseAllYoutube() {
+        $("#lg-gallery .current iframe[src*=\"youtube.com\"]").each(function () {
+            var iframe = $(this)[0].contentWindow;
+            iframe.postMessage("{\"event\":\"command\",\"func\":\"pauseVideo\",\"args\":\"\"}", '*');
+        });
+    }
+    $("#video-gallery").lightGallery({
+        lang: {
+            allPhotos: "Kaikki videot"
+        },
+        videoAutoplay: true,
+        onSlideBefore: function () {
+            pauseAllYoutube();
+        },
+        onBeforeClose: function () {
+            pauseAllYoutube();
+        },
+        cssEasing: "cubic-bezier(0.680, -0.550, 0.265, 1.550)",
+        selector: $("#video-gallery a"),
+        youtubePlayerParams: {
+            enablejsapi: 1,
+            modestbranding: 1,
+            showinfo: 1,
+            rel: 0
+        }
+    });
+    $(".modal").on("hidden.bs.modal", function (e) {
         $(e.target).find("iframe").attr("src", $(e.target).find("iframe").attr("src"));
     });
     $("#eventlist").gCalReader({
