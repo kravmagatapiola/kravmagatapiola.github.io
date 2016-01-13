@@ -213,6 +213,7 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\sali2.jpg" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\banner.jpg" />
     <Content Include="Images\belt.jpg" />
@@ -263,6 +264,7 @@
     <Content Include="Images\teaser4.jpg" />
     <Content Include="Images\teaser3.jpg" />
     <Content Include="Images\teaser5.jpg" />
+    <Content Include="Images\teaser6.jpg" />
     <Content Include="Images\Teemu.jpg" />
     <Content Include="Images\km.png" />
     <Content Include="Images\km_musta.png" />
