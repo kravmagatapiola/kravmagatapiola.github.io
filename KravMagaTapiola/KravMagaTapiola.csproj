@@ -213,6 +213,7 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\esport.jpg" />
     <Content Include="Images\sali2.jpg" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\banner.jpg" />
@@ -280,6 +281,7 @@
     <Content Include="Content\plugins\light-gallery\fonts\Slide-icons.eot" />
     <Content Include="Content\plugins\light-gallery\fonts\Slide-icons.ttf" />
     <Content Include="Content\plugins\light-gallery\fonts\Slide-icons.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
     <None Include="Properties\PublishProfiles\kravmagatapiola.pubxml" />
     <Content Include="Scripts\custom.js" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
