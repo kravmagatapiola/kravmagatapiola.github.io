@@ -201,6 +201,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Images\intro.jpg" />
     <Content Include="Images\kamppailukeskus.jpg" />
     <Content Include="googlef298b04b02cd9c3e.html" />
     <Content Include="Content\plugins\light-gallery\css\lightGallery.css" />
