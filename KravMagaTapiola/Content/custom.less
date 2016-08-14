@@ -101,9 +101,19 @@ h1 span, h2 span, a {
     background-color: @brandBackground;
 }
 @media (max-width: 998px) {
-    .logo {
-        width: 260px;
+    
+    .footer-content {
+        .embed-responsive-4by3 {
+            padding-bottom: 100%;
+        }
     }
+    .header {
+        background-color: rgba(255,255,255,0.8);
+    }
+  .logo{
+      margin: 0;
+        max-width: 250px;
+  }
     #banner {
         padding-top: 180px;
     }
@@ -114,8 +124,33 @@ h1 span, h2 span, a {
         margin-bottom: 0;
         margin-top: 20px;
     }
+    #video {
+        min-height: 0;
+        height: 100%;
+    }
+}
+@media (max-width: 767px) {
+      .logo {
+        position: absolute;
+        width: 220px;
+    }
+}
+@media (max-width: 335px) {
+    #banner {
+        max-height: 280px;
+    }
+    #play {
+        height: 50%;
+    }
 }
 @media (max-width: 780px) {
+    .bordered {
+        border: none;
+        padding: 0;
+    }
+    .jumbotron {
+        padding: 10px 20px;
+    }
     #banner {
         padding-top: 110px;
     }

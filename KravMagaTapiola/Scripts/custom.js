@@ -3,7 +3,7 @@ $(document).ready(function () {
     function pauseAllYoutube() {
         $("#lg-gallery .current iframe[src*=\"youtube.com\"]").each(function () {
             var iframe = $(this)[0].contentWindow;
-            iframe.postMessage("{\"event\":\"command\",\"func\":\"pauseVideo\",\"args\":\"\"}", '*');
+            iframe.postMessage("{\"event\":\"command\",\"func\":\"pauseVideo\",\"args\":\"\"}", "*");
         });
     }
     $("#video-gallery").lightGallery({
