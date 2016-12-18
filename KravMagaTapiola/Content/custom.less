@@ -13,6 +13,18 @@
 div#video-gallery img {
     width: 100%;
 }
+
+.banner-caption {
+    top: 25%;
+}
+.banner-caption h1 {
+    font-size: 30px;
+    color: #333;
+}
+.banner-caption .lead {
+    color: #333;
+}
+
 div#video-gallery .thumb {
     margin-bottom: 20px;
 }
@@ -100,6 +112,11 @@ h1 span, h2 span, a {
     border-color: @brandColor;
     background-color: @brandBackground;
 }
+@media (min-width:1200px) {
+    .banner-caption h1 {
+        font-size: 60px;
+    }
+}
 @media (max-width: 998px) {
     
     .footer-content {
@@ -152,7 +169,7 @@ h1 span, h2 span, a {
         padding: 10px 20px;
     }
     #banner {
-        padding-top: 110px;
+        padding-top: 90px;
     }
     .header-left {
         float: left;

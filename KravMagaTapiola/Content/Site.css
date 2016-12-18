@@ -268,9 +268,7 @@ blockquote {
 
 /* Sections
 ----------------------------------------------------------------------------- */
-.banner-caption h1 {
-    color: #333;
-}
+.banner-caption h1,
 .banner-caption h2,
 .banner-caption h3,
 .banner-caption h4,
