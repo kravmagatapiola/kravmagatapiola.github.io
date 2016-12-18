@@ -217,6 +217,8 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\kesa_leiri.jpg" />
+    <Content Include="Images\knife.jpg" />
     <Content Include="Images\sali2.jpg" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\banner.jpg" />
