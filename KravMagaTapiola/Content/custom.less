@@ -19,6 +19,7 @@ div#video-gallery img {
 }
 .banner-caption .lead {
     color: #333;
+    font-weight: 500;
 }
 
 div#video-gallery .thumb {
@@ -79,8 +80,14 @@ h1 span, h2 span, a {
   border-color: @brandColor;
 }
 .translucent-bg.blue:after {
-    background-color: @brandColor;
     background-color: @brandBackground;
+}
+.jumbotron {
+    border: 1px solid;
+}
+.well, .jumbotron {
+    border-color: lighten(@brandBackground, 30%);
+    background-color: lighten(@brandBackground, 39%);
 }
 .text-colored {
   color: @brandColor;
