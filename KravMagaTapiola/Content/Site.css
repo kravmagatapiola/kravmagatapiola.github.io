@@ -131,17 +131,6 @@ blockquote {
 	position: relative;
 	color: #fff;
 }
-.banner-image {
-	vertical-align: middle;
-	min-height: 100%;
-	width: 100%;
-}
-.banner-caption {
-	position: absolute;
-	top: 40%;
-	width: 100%;
-	z-index: 2;
-}
 .subfooter {
 	background-color: #fafafa;
 	border-top: 1px solid #f3f3f3;
