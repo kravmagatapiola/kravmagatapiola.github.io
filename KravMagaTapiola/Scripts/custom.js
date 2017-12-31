@@ -56,6 +56,16 @@ $(document).ready(function () {
     $(".modal").on("hidden.bs.modal", function (e) {
         $(e.target).find("iframe").attr("src", $(e.target).find("iframe").attr("src"));
     });
+    $("#fast-map a").on("click", function (e) {
+        e.preventDefault();
+        const map = $(this).parent();
+        const iframeSrc = map.data("iframe-src");
+        const iframeWidth = map.data("iframe-width");
+        const iframeHeight = map.data("iframe-height");
+        map.html(`<iframe src="${iframeSrc}" frameborder="0" style="border:0; width:${iframeWidth}; height:${iframeHeight};" allowfullscreen></iframe>`);
+
+        return false;
+    });
 });
 
 (function (i, s, o, g, r, a, m) {
