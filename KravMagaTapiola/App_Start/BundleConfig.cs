@@ -41,11 +41,16 @@ namespace KravMagaTapiola
             bundles.Add(new StyleBundle("~/Content/bootstrap", "//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
                 .Include("~/Content/bootstrap.css"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
+            var customStyles = new Bundle("~/Content/css").Include(
                  "~/Content/animate.css",
                  "~/Content/animations.css",
                  "~/Content/plugins/light-gallery/css/lightGallery.css",
-                 "~/Content/Site.css"));
+                 "~/Content/Site.css",
+                 "~/Content/custom.less");
+            customStyles.Transforms.Add(new LessTransform());
+            customStyles.Transforms.Add(new CssMinify());
+            bundles.Add(customStyles);
+
         }
     }
 }
