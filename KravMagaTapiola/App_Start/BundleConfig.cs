@@ -30,8 +30,10 @@ namespace KravMagaTapiola
                 .Include(
                 "~/Scripts/plugins/isotope/isotope.pkgd.min.js",
                 "~/Scripts/plugins/jquery.appear.js",
-                "~/Scripts/plugins/jquery.youtubebackground.js", 
+                "~/Scripts/plugins/jquery.youtubebackground.js",
                 "~/Scripts/plugins/light-gallery/lightGallery.js",
+                "~/Scripts/plugins/light-gallery/lg-autoplay.js",
+                "~/Scripts/plugins/light-gallery/lg-video.js",
                 "~/Scripts/template.js", 
                 "~/Scripts/custom.js"));
 

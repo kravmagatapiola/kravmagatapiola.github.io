@@ -34,24 +34,9 @@ $(document).ready(function () {
         });
     }
     $("#video-gallery").lightGallery({
-        lang: {
-            allPhotos: "Kaikki videot"
-        },
-        videoAutoplay: true,
-        onSlideBefore: function () {
-            pauseAllYoutube();
-        },
-        onBeforeClose: function () {
-            pauseAllYoutube();
-        },
-        cssEasing: "cubic-bezier(0.680, -0.550, 0.265, 1.550)",
-        selector: $("#video-gallery a"),
-        youtubePlayerParams: {
-            enablejsapi: 1,
-            modestbranding: 1,
-            showinfo: 1,
-            rel: 0
-        }
+        download: false,
+        autoplayFirstVideo: true,
+        youtubePlayerParams: { autoplay: 1, modestbranding: 1, showinfo: 0, controls: 0 }
     });
     $(".modal").on("hidden.bs.modal", function (e) {
         $(e.target).find("iframe").attr("src", $(e.target).find("iframe").attr("src"));
@@ -67,7 +52,16 @@ $(document).ready(function () {
         return false;
     });
 });
+function init() {
+    const vidDefer = $(".embedded-video");
+    for (let i = 0; i < vidDefer.length; i++) {
+        if (vidDefer[i].getAttribute("data-src")) {
+            vidDefer[i].setAttribute("src", vidDefer[i].getAttribute("data-src"));
+        }
+    }
+}
 
+window.onload = init;
 (function (i, s, o, g, r, a, m) {
     i["GoogleAnalyticsObject"] = r;
     i[r] = i[r] ||
