@@ -29,28 +29,15 @@ $(document).ready(function () {
         $(e.target).find("iframe").attr("src", $(e.target).find("iframe").attr("src"));
     });
 
-    const options = {
-        onReady: function() {
+    $("#banner-player").YTPlayer({
+        fitToBackground: true,
+        videoId: "vXoiZjnCi30",
+        pauseOnScroll: false,
+        callback: function () {
             $("#banner-image").remove();
             $("#banner-loader").remove();
-        },
-        playOnlyIfVisible: false,
-        showYTLogo: false,
-        stopMovieOnBlur: false,
-        mobileFallbackImage: "images/video_placeholder.jpg",
-        showControls: false,
-        ratio: "auto",
-        opacity: 1,
-        autoPlay: true,
-        loop: true,
-        mute: true,
-        startAt: 0,
-        gaTrack: false,
-        addRaster: false,
-        quality: "default"
-    };
-
-    $(".banner-player").YTPlayer(options);
+        }
+    });
 
 });
 

@@ -204,11 +204,6 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\plugins\YTPlayer\images\raster%402x.png" />
-    <Content Include="Content\plugins\YTPlayer\images\raster.png" />
-    <Content Include="Content\plugins\YTPlayer\images\raster_dot%402x.png" />
-    <Content Include="Content\plugins\YTPlayer\images\raster_dot.png" />
-    <Content Include="Content\plugins\YTPlayer\jquery.mb.YTPlayer.min.css" />
     <Content Include="googlea1160a3ac7dd9443.html" />
     <Content Include="Images\intro.jpg" />
     <Content Include="Images\kamppailukeskus.jpg" />
@@ -296,9 +291,6 @@
     <Content Include="Content\plugins\light-gallery\fonts\Slide-icons.ttf" />
     <Content Include="Content\plugins\light-gallery\fonts\Slide-icons.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
-    <Content Include="Content\plugins\YTPlayer\font\ytp-regular.eot" />
-    <Content Include="Content\plugins\YTPlayer\font\ytp-regular.ttf" />
-    <Content Include="Content\plugins\YTPlayer\font\ytp-regular.woff" />
     <None Include="Properties\PublishProfiles\kravmagatapiola.pubxml" />
     <Content Include="Scripts\custom.js" />
     <Content Include="Scripts\jquery-3.2.1.js" />
@@ -312,11 +304,9 @@
     <Content Include="Scripts\plugins\isotope\isotope.pkgd.js" />
     <Content Include="Scripts\plugins\isotope\isotope.pkgd.min.js" />
     <Content Include="Scripts\plugins\jquery.appear.js" />
-    <Content Include="Scripts\plugins\jquery.backstretch.min.js" />
     <Content Include="Scripts\plugins\light-gallery\lightGallery.js" />
     <Content Include="Scripts\plugins\light-gallery\lightGallery.min.js" />
-    <Content Include="Scripts\plugins\jquery.mb.YTPlayer.js" />
-    <Content Include="Scripts\plugins\jquery.mb.YTPlayer.min.js" />
+    <Content Include="Scripts\plugins\jquery.youtubebackground.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\sammy-0.7.4.js" />

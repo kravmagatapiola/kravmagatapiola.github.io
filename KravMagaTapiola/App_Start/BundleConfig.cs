@@ -19,11 +19,6 @@ namespace KravMagaTapiola
             modernizr.CdnFallbackExpression = "window.Modernizr";
             bundles.Add(modernizr);
 
-            var ytPlayer = new ScriptBundle("~/bundles/ytPlayer", "//cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.1.5/jquery.mb.YTPlayer.min.js")
-                .Include("~/Scripts/plugins/jquery.mb.YTPlayer.js");
-            ytPlayer.CdnFallbackExpression = "$.fn.YTPPlay";
-            bundles.Add(ytPlayer);
-
             var bootstrap = new ScriptBundle("~/bundles/bootstrap", "//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
                 .Include("~/Scripts/bootstrap.js");
             bootstrap.CdnFallbackExpression = "$.fn.modal";
@@ -34,7 +29,8 @@ namespace KravMagaTapiola
                 "~/Scripts/respond.js")
                 .Include(
                 "~/Scripts/plugins/isotope/isotope.pkgd.min.js",
-                "~/Scripts/plugins/jquery.appear.js", 
+                "~/Scripts/plugins/jquery.appear.js",
+                "~/Scripts/plugins/jquery.youtubebackground.js", 
                 "~/Scripts/plugins/light-gallery/lightGallery.js",
                 "~/Scripts/template.js", 
                 "~/Scripts/custom.js"));
@@ -44,9 +40,6 @@ namespace KravMagaTapiola
 
             bundles.Add(new StyleBundle("~/Content/bootstrap", "//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
                 .Include("~/Content/bootstrap.css"));
-
-            bundles.Add(new StyleBundle("~/Content/YTPlayer", "//cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.1.5/css/jquery.mb.YTPlayer.min.css")
-                .Include("~/Content/plugins/YTPlayer/jquery.mb.YTPlayer.min.css"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                  "~/Content/animate.css",

@@ -31,8 +31,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,300&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:700,400,300" rel="stylesheet" type="text/css">
     @Styles.Render("~/Content/bootstrap", "~/Content/font-awesome", "~/Content/css", "~/Content/custom.less", "~/Content/YTPlayer")
-    @Scripts.Render("~/bundles/jquery", "~/bundles/modernizr")
-    @Scripts.Render("~/bundles/YTPlayer")
+    @Scripts.Render("~/bundles/modernizr")
 </head>
 <body class="no-trans">
      <!-- scrollToTop -->
@@ -115,7 +114,8 @@
     <!-- header end -->
     <!-- banner start -->
     <!-- ================ -->
-    <div id="banner" class="banner banner-player" data-property="{ videoURL:'vXoiZjnCi30', containment:'self' }">
+    <div id="banner" class="banner">
+        <div id="banner-player"></div>
         <div class="banner-caption">
             <div class="container">
                 <div class="row">
@@ -218,7 +218,8 @@
 
     </footer>
     <!-- footer end -->
-    @Scripts.Render("~/bundles/bootstrap", "~/Scripts/site")
+    
+    @Scripts.Render("~/bundles/jquery", "~/bundles/bootstrap", "~/bundles/YTPlayer", "~/Scripts/site")
     @RenderSection("Scripts", required: false)
     
     <script type="application/ld+json">
