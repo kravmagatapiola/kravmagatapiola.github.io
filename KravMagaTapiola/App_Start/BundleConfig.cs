@@ -14,7 +14,7 @@ namespace KravMagaTapiola
             jquery.CdnFallbackExpression = "window.jQuery";
             bundles.Add(jquery);
 
-            var modernizr = new ScriptBundle("~/bundles/modernizr", "//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.3/modernizr.min.js")
+            var modernizr = new ScriptBundle("~/bundles/modernizr", "//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js")
                 .Include("~/Scripts/modernizr-{version}.js");
             modernizr.CdnFallbackExpression = "window.Modernizr";
             bundles.Add(modernizr);
