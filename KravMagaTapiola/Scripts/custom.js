@@ -13,8 +13,18 @@ WebFontConfig = {
     wf.async = "true";
     const s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(wf, s);
-})(); 
-
+})();
+(function() {
+    $("#banner-player").YTPlayer({
+        fitToBackground: true,
+        videoId: "vXoiZjnCi30",
+        pauseOnScroll: false,
+        callback: function() {
+            $("#banner-image").remove();
+            $("#banner-loader").remove();
+        }
+    });
+})();
 $(document).ready(function () {
    
     function pauseAllYoutube() {
@@ -46,17 +56,6 @@ $(document).ready(function () {
     $(".modal").on("hidden.bs.modal", function (e) {
         $(e.target).find("iframe").attr("src", $(e.target).find("iframe").attr("src"));
     });
-
-    $("#banner-player").YTPlayer({
-        fitToBackground: true,
-        videoId: "vXoiZjnCi30",
-        pauseOnScroll: false,
-        callback: function () {
-            $("#banner-image").remove();
-            $("#banner-loader").remove();
-        }
-    });
-
 });
 
 (function (i, s, o, g, r, a, m) {
