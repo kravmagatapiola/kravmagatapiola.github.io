@@ -34,7 +34,6 @@ namespace KravMagaTapiola
                 "~/Scripts/respond.js")
                 .Include(
                 "~/Scripts/plugins/isotope/isotope.pkgd.min.js",
-                "~/Scripts/plugins/jquery.backstretch.min.js", 
                 "~/Scripts/plugins/jquery.appear.js", 
                 "~/Scripts/plugins/light-gallery/lightGallery.js",
                 "~/Scripts/template.js", 

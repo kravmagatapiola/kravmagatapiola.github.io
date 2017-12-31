@@ -144,7 +144,7 @@
                 var r = old.apply(this, arguments);
                 $.fn.appear.run();
                 return r;
-            }
+            };
         }
     });
 
