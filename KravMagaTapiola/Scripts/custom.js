@@ -1,4 +1,22 @@
+WebFontConfig = {
+    google: {
+        families: [
+            "Open+Sans:400italic,700italic,400,700,300&amp;subset=latin,latin-ext",
+            "Raleway:700,400,300"
+        ]
+    }
+};
+(function () {
+    const wf = document.createElement("script");
+    wf.src = "https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js";
+    wf.type = "text/javascript";
+    wf.async = "true";
+    const s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(wf, s);
+})(); 
+
 $(document).ready(function () {
+   
     function pauseAllYoutube() {
         $("#lg-gallery .current iframe[src*=\"youtube.com\"]").each(function () {
             const iframe = $(this)[0].contentWindow;
@@ -58,7 +76,8 @@ ga("create", "UA-66211929-1", "auto");
 ga("send", "pageview");
 
 (function (d, s, id) {
-    var js, mjs = d.getElementsByTagName(s)[0];
+    var js;
+    const mjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s);
     js.id = id;
