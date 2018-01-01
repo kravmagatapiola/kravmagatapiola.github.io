@@ -19,11 +19,16 @@ $(function($) {
         fitToBackground: true,
         videoId: "vXoiZjnCi30",
         pauseOnScroll: false,
+        playerVars: {
+            suggestedQuality: "small"
+        },
         callback: function() {
             $("#banner-image").remove();
             $("#banner-loader").remove();
+           
         }
     });
+   
 });
 $(document).ready(function () {
     $("#video-gallery").lightGallery({
