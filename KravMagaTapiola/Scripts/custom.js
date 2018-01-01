@@ -14,7 +14,7 @@ WebFontConfig = {
     const s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(wf, s);
 })();
-(function() {
+$(function($) {
     $("#banner-player").YTPlayer({
         fitToBackground: true,
         videoId: "vXoiZjnCi30",
@@ -24,15 +24,8 @@ WebFontConfig = {
             $("#banner-loader").remove();
         }
     });
-})();
+});
 $(document).ready(function () {
-   
-    function pauseAllYoutube() {
-        $("#lg-gallery .current iframe[src*=\"youtube.com\"]").each(function () {
-            const iframe = $(this)[0].contentWindow;
-            iframe.postMessage("{\"event\":\"command\",\"func\":\"pauseVideo\",\"args\":\"\"}", "*");
-        });
-    }
     $("#video-gallery").lightGallery({
         download: false,
         autoplayFirstVideo: true,
@@ -60,7 +53,6 @@ function init() {
         }
     }
 }
-
 window.onload = init;
 (function (i, s, o, g, r, a, m) {
     i["GoogleAnalyticsObject"] = r;
