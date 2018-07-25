@@ -14,6 +14,10 @@ body {
 .site-name {
 	font-family: 'Raleway', sans-serif;
 }
+#seminar-ad p {
+    margin: 7px 0;
+    font-size: 1.4em;
+}
 html,
 body {
 	height: 100%;
