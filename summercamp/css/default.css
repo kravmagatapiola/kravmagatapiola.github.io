@@ -107,6 +107,9 @@ code, kbd, pre, samp {
    font-size: 1em;
 }
 
+header.row {
+	height: 0;
+}
 pre {
    white-space: pre;
    white-space: pre-wrap;
@@ -551,7 +554,6 @@ input::-moz-focus-inner {
 #signup {
 	clear: both;
     margin: 48px auto 18px;
-    width: 50%;
 }
 
 form { margin-bottom: 24px; }
@@ -766,7 +768,7 @@ properly.
 @media only screen and (max-width: 767px) {
 
    .row {
-	   width: 480px;
+	   width: 520px;
 	   margin: 0 auto;
       padding: 0;
 	}

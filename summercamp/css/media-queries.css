@@ -15,6 +15,9 @@
 	------------------------------------------------------------------ */
 	#intro {	min-height: 828px; }
 
+	#about ul {
+		padding-left: 5%; 
+	}
 	/* Header 
 	------------------------------------------------------------------ */
 	header #logo {	
@@ -27,7 +30,7 @@
 	
    /* main
    ------------------------------------------------------------------ */
-   #main { margin-top: 90px; }
+   #main { padding-top: 90px; }
   	#main h1 { 
   		font: 38px/1.2em 'montserrat-bold', sans-serif; 
   		padding: 0 15%;
@@ -94,14 +97,16 @@
 
 /* mobile 
 ---------------------------------------------------------------------- */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
 
 	/* intro styles
 	------------------------------------------------------------------ */
 	header #logo {	
-		top: 30px;	
-		width: 90px;
-		margin-left: -45px;			
+		width: 90px;	
+		margin-left: 0;
+		position: fixed;
+		top: 0;
+		left: 0;		
 	}
 
 	/* primary navigation
@@ -114,7 +119,7 @@
 
    /* main
    ------------------------------------------------------------------ */
-   #main { margin-top: 48px; }
+   #main { padding-top: 48px; }
   	#main h1 { 
   		font: 30px/1.2em 'montserrat-bold', sans-serif; 
   		text-align: center;  		
@@ -279,17 +284,23 @@
 
 }
 
-/* screenwidth less than 400px
+/* screenwidth less than 500px
   -------------------------------------------------------------------------- */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
 
 	/* intro styles
 	------------------------------------------------------------------ */
 	#intro {	min-height: 744px; }
 
+	#logo { 
+		width: 45px;
+	}
+	.action a.button {
+		font-size: 1.5em;
+	}
 	/* main
    ------------------------------------------------------------- */
-   #main { margin-top: 42px; }
+   #main { padding-top: 42px; }
    #main h1 { font: 25px/1.2em 'montserrat-bold', sans-serif; 	}
   	#main p { font: 12px/21px 'montserrat-regular', sans-serif;	}
 
