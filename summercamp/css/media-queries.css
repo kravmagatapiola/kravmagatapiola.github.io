@@ -18,11 +18,13 @@
 	/* Header 
 	------------------------------------------------------------------ */
 	header #logo {	
-		top: 66px;	
-		width: 100px;
-		margin-left: -50px;
+			width: 100px;	
+		margin-left: 0;
+		position: fixed;
+		top: 0;
+		left: 0;
 	}
-
+	
    /* main
    ------------------------------------------------------------------ */
    #main { margin-top: 90px; }
