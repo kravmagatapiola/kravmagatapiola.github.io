@@ -14,10 +14,12 @@ body {
 .site-name {
 	font-family: 'Raleway', sans-serif;
 }
+
 #seminar-ad p {
     margin: 7px 0;
     font-size: 1.4em;
 }
+
 html,
 body {
 	height: 100%;
@@ -139,7 +141,7 @@ blockquote {
 	background-color: #fafafa;
 	border-top: 1px solid #f3f3f3;
 	border-bottom: 1px solid #f3f3f3;
-	padding: 40px 0;
+	padding: 40px 0 90px;
 }
 .section {
 	background-color: #ffffff;
