@@ -194,13 +194,21 @@ ul#nav li.current a { color: #1E732D; }
 	color: #fff;
 	line-height: 1.4em;
 }
- #about .seminar-content {
-	 list-style: none;
+#about .seminar-content {
+	list-style: none;
 }
 #about ul {
 	padding-left: 10%;
 	list-style: disc outside;
 	text-align: left;
+}
+#about ul.prices {
+	list-style: none;
+	text-align: center;
+}
+#about ul.timetable {
+	padding-left: 0;
+	list-style: none;
 }
 #about li {
 	line-height: 1.2em;
@@ -340,7 +348,7 @@ ul#nav li.current a { color: #1E732D; }
 	padding: 0 3%;
 }
 #about h3 {
-   font: 15px/24px 'montserrat-bold', sans-serif;
+   font: 20px/29px 'montserrat-bold', sans-serif;
    color: #fff;
    text-transform: uppercase;
    letter-spacing: 3px;   
