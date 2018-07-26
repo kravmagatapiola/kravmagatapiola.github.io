@@ -197,6 +197,10 @@ ul#nav li.current a { color: #1E732D; }
 #about .seminar-content {
 	list-style: none;
 }
+#about ul.timetable {
+	padding-left: 0;
+	list-style: none;
+}
 #about ul {
 	padding-left: 10%;
 	list-style: disc outside;
@@ -204,7 +208,7 @@ ul#nav li.current a { color: #1E732D; }
 }
 #about ul.prices {
 	list-style: none;
-	text-align: center;
+	text-align: left;
 }
 #about ul.timetable {
 	padding-left: 0;
