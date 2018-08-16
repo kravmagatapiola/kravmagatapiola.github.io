@@ -246,6 +246,6 @@ jQuery(document).ready(function($) {
 		*/
 
 		$( '#cbp-qtrotator' ).cbpQTRotator( {interval: 5000});
-
-
+		
+		$.DNLightBox({speed:500, scale: 1});
 });
