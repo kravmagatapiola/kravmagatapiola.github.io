@@ -68,7 +68,7 @@
 					$this.appear(function() {
 						setTimeout(function() {
 							$this.addClass(`animated object-visible ${animationEffect}`);
-						}, 400);
+						}, 350);
 					}, {accX: 0, accY: -130});
 				} else {
 					$this.addClass("object-visible");
