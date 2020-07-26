@@ -134,7 +134,8 @@ $(function($) {
         videoId: "vXoiZjnCi30",
         pauseOnScroll: false,
         playerVars: {
-            suggestedQuality: "small"
+            "suggestedQuality": "small",
+			"origin": window.location
         },
         callback: function() {
             $("#banner-image").remove();
