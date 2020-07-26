@@ -928,6 +928,9 @@ h1 span, h2 span, a {
     left: auto;
     width: 100%;
 }
+#banner {
+	overflow-x: hidden;
+}
 #banner-loader > svg {
         height: 80px;
     }
