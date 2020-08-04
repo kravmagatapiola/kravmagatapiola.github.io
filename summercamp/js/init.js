@@ -98,7 +98,7 @@ jQuery(document).ready(function($) {
 /*----------------------------------------------------*/
 /* Final Countdown Settings
 ------------------------------------------------------ */
-	var finalDate = '2019/08/31';
+	var finalDate = '2020/09/05';
 
 	$('div#counter').countdown(finalDate)
    	.on('update.countdown', function(event) {
@@ -118,10 +118,10 @@ jQuery(document).ready(function($) {
    var map;
    // main directions
    map = new GMaps({
-      el: '#map', 
-      lat: 60.9618022, 
-      lng: 25.9228606, 
-      zoom: 12, 
+      el: '#map',
+      lat: 60.2387849, 
+      lng: 24.6073422, 
+      zoom: 11, 
       zoomControl : true,
       zoomControlOpt: { style : 'SMALL', position: 'TOP_LEFT' }, 
       panControl : false, 
