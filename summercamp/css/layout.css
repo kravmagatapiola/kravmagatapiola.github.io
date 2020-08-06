@@ -211,6 +211,10 @@ ul#nav li.current a { color: #1E732D; }
 	list-style: none;
 	text-align: left;
 }
+#about ul.sub-prices {
+	padding-left: 1rem;
+	text-align: left;
+}
 #about ul.timetable {
 	padding-left: 0;
 	list-style: none;
