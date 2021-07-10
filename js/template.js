@@ -190,5 +190,5 @@ window.onload = init;
 ga("create", "UA-66211929-1", "auto");
 ga("send", "pageview");
 
-function(d, s, id) { var js, mjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.async = true; js.src = "https://d2ubdm6yoox6gh.cloudfront.net/assets/myclub-embed.js"; mjs.parentNode.insertBefore(js, mjs); }(document, 'script', 'myclub-embed-js'));
+(function(d, s, id) { var js, mjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.async = true; js.src = "https://d2ubdm6yoox6gh.cloudfront.net/assets/myclub-embed.js"; mjs.parentNode.insertBefore(js, mjs); }(document, 'script', 'myclub-embed-js'));
 			
