@@ -452,20 +452,21 @@ textarea {
 }
 .main-navigation .navbar-default .navbar-nav > li > a {
 	color: #fff;
-	padding: 10px 20px;
-	font-size: clamp(15px, 1.35vw, 21px);
+	padding: 10px 12px;
+	font-size: clamp(14px, 1.1vw, 20px);
 	font-weight: 700;
-	letter-spacing: 0.04em;
+	letter-spacing: 0.02em;
 	text-transform: uppercase;
 	text-decoration: none;
 	position: relative;
 	display: inline-block;
+	white-space: nowrap;
 }
 .main-navigation .navbar-default .navbar-nav > li > a::after {
 	content: "";
 	position: absolute;
-	left: 20px;
-	right: 20px;
+	left: 12px;
+	right: 12px;
 	bottom: 4px;
 	height: 2px;
 	background-color: currentColor;
@@ -503,6 +504,12 @@ textarea {
 	}
 	.navbar-nav {
 		float: left !important;
+	}
+	/* Tightest range for the un-collapsed menu (navbar-expand-md kicks in at 768px) —
+	   five nav items need to fit next to the logo in a none-too-wide container here. */
+	.main-navigation .navbar-default .navbar-nav > li > a {
+		padding-left: 8px;
+		padding-right: 8px;
 	}
 }
 @media (max-width:767px) {
