@@ -67,16 +67,16 @@ h1 span,
 h2 span,
 h3 span,
 h4 span {
-	color: #339BEB;
+	color: #579cff;
 }
 .text-colored {
-	color: #55acee;
+	color: #004ebd;
 }
 a {
-	color: #55acee;
+	color: #004ebd;
 }
 a:hover {
-	color: #339BEB;
+	color: #579cff;
 }
 a:focus,
 a:active {
@@ -157,7 +157,7 @@ blockquote {
 	color: #ffffff;
 }
 .default-bg.blue {
-	background-color: #55acee;
+	background-color: #004ebd;
 }
 .translucent-bg {
 	color: #ffffff;
@@ -214,7 +214,7 @@ blockquote {
 	background-color: rgba(0, 0, 0, 0.7);
 }
 .translucent-bg.blue:after {
-	background-color: rgba(85, 172, 238, 0.7);
+	background-color: rgba(0, 78, 189, 0.7);
 }
 .translucent-bg .container {
 	z-index: 3;
@@ -296,15 +296,30 @@ blockquote {
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
 }
+/* Bootstrap 5's .btn-primary ships with its own stock blue (--bs-btn-bg etc, set as literal
+   values inside the compiled .btn-primary rule) which doesn't come from a single root
+   variable we can override in one place. Re-pointing those per-component variables here
+   is the supported way to reskin it without touching the vendored bootstrap.min.css. */
+.btn-primary {
+	--bs-btn-bg: #004ebd;
+	--bs-btn-border-color: #004ebd;
+	--bs-btn-hover-bg: #003b8f;
+	--bs-btn-hover-border-color: #003b8f;
+	--bs-btn-active-bg: #00337a;
+	--bs-btn-active-border-color: #00337a;
+	--bs-btn-disabled-bg: #004ebd;
+	--bs-btn-disabled-border-color: #004ebd;
+	--bs-btn-focus-shadow-rgb: 0, 78, 189;
+}
 .btn-default {
-	color: #55acee;
+	color: #004ebd;
 	background-color: #ffffff;
 	border: 1px solid #cccccc;
 }
 .btn-default:hover {
 	color: #ffffff;
-	background-color: #339BEB;
-	border-color: #339BEB;
+	background-color: #579cff;
+	border-color: #579cff;
 }
 
 /* Collapse
@@ -335,7 +350,7 @@ blockquote {
 	padding: 12px 35px 12px 15px;
 	display: inline-block;
 	width: 100%;
-	background-color: #55acee;
+	background-color: #004ebd;
 	color: #ffffff;
 	position: relative;
 	text-decoration: none;
@@ -360,7 +375,7 @@ blockquote {
 }
 .panel-heading a:hover {
 	text-decoration: none;
-	background-color: #55acee;
+	background-color: #004ebd;
 	color: #ffffff;
 }
 .panel-title a i {
@@ -374,8 +389,8 @@ blockquote {
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus,
 .nav-pills > li > a:hover {
-	background-color: #55acee;
-	border-color: #55acee;
+	background-color: #004ebd;
+	border-color: #004ebd;
 	color: #ffffff;
 }
 .nav-pills > li > a {
@@ -414,7 +429,7 @@ textarea {
    inherited rounded top corners sitting on a square modal window, which looked broken.
    Letting Bootstrap's own radius apply everywhere keeps the whole modal consistent. */
 .modal-header {
-	background-color: #55acee;
+	background-color: #004ebd;
 	color: #ffffff;
 }
 .modal-header h4 {
@@ -480,11 +495,11 @@ textarea {
 }
 .main-navigation .navbar-default .navbar-nav > li.active > a {
 	background-color: transparent;
-	color: #55acee;
+	color: #004ebd;
 }
 .main-navigation .navbar-default .navbar-nav > li > a:hover,
 .main-navigation .navbar-default .navbar-nav > li.active > a:hover {
-	color: #55acee;
+	color: #004ebd;
 }
 @media (min-width:768px) {
 	.main-navigation .navbar-default .navbar-nav > li > a {
@@ -629,6 +644,40 @@ textarea {
 	font-size: 12px;
 }
 
+/* Signup hint + myClub booking widget
+----------------------------------- */
+.kmt-signup-hint {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	background-color: rgba(0, 78, 189, 0.08);
+	border-left: 3px solid #004ebd;
+	padding: 10px 16px;
+	border-radius: 4px;
+	font-weight: 600;
+	color: #333333;
+}
+.kmt-signup-hint i {
+	color: #004ebd;
+	font-size: 18px;
+}
+/* The myClub widget injects its own rows into .myclub-embed and they ARE clickable, but the
+   widget doesn't set cursor:pointer itself. cursor is an inherited CSS property, so setting
+   it once on the wrapper reaches every row it injects without us needing to know (or keep in
+   sync with) its internal class names. The hover lift is a best-effort visual nudge on
+   whatever the widget's direct row elements turn out to be. */
+.myclub-embed {
+	cursor: pointer;
+	margin-bottom: 15px;
+}
+.myclub-embed > div {
+	transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.myclub-embed > div:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
 /* Krav Magan periaatteet (principle cards)
 ---------------------------------- */
 .kmt-principles-lead {
@@ -645,6 +694,8 @@ textarea {
 	height: 100%;
 	padding: 30px 25px;
 	text-align: center;
+	display: flex;
+	flex-direction: column;
 	background-color: rgba(255, 255, 255, 0.08);
 	border: 1px solid rgba(255, 255, 255, 0.15);
 	border-radius: 8px;
@@ -659,8 +710,9 @@ textarea {
 }
 .kmt-principle-icon {
 	display: block;
+	align-self: center;
 	font-size: 34px;
-	color: #55acee;
+	color: #004ebd;
 	margin-bottom: 15px;
 }
 .kmt-principle h3 {
@@ -714,7 +766,7 @@ textarea {
 	transition: all 0.2s ease-in-out;
 }
 .social-links li.twitter a:hover {
-	color: #55acee;
+	color: #004ebd;
 }
 .social-links li.skype a:hover {
 	color: #00aff0;
@@ -811,7 +863,7 @@ textarea {
 	bottom: 0;
 	width: 100%;
 	padding: 12px 15px;
-	background-color: rgba(52, 123, 255, 0.85);
+	background-color: rgba(0, 78, 189, 0.85);
 	color: #ffffff;
 	font-size: 16px;
 	font-weight: 700;
@@ -857,7 +909,7 @@ div#video-gallery img {
     
 }
 .banner-caption a {
-    background-color: #347bff;
+    background-color: #004ebd;
     font-size: 40px;
     padding: 20px 40px;
     border-radius: 20px;
@@ -927,7 +979,7 @@ div#video-gallery .thumb {
 }
 .fixed-header-on .header {
     background-color: rgba(255, 255, 255, 0.90);
-    border-bottom: 2px solid #347bff;
+    border-bottom: 2px solid #004ebd;
 }
 .main-navigation .navbar-default .navbar-nav > li > a {
     color: #222;
@@ -935,49 +987,53 @@ div#video-gallery .thumb {
 }
 .main-navigation .navbar-default .navbar-nav > li.active > a {
   background-color: transparent;
-  color: #347bff;
+  color: #004ebd;
 }
 h1 span, h2 span, a {
-    color: #347bff;
+    color: #004ebd;
 }
 .panel-heading a, .panel-heading a:hover {
-    background-color:#347bff;
+    background-color:#004ebd;
 }
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus, .nav-pills > li > a:hover {
-      background-color: #347bff;
-  border-color: #347bff;
+      background-color: #004ebd;
+  border-color: #004ebd;
 }
 .translucent-bg.blue:after {
-    background-color: rgba(52, 123, 255, 0.7);
+    background-color: rgba(0, 78, 189, 0.7);
 }
 .jumbotron {
     border: 1px solid;
 }
 .well, .jumbotron {
-    border-color: lighten(rgba(52, 123, 255, 0.7), 30%);
-    background-color: lighten(rgba(52, 123, 255, 0.7), 39%);
+    border-color: #579cff;
+    background-color: #85b7ff;
 }
 .text-colored {
-  color: #347bff;
+  color: #004ebd;
 }
 .main-navigation .navbar-default .navbar-nav > li > a:hover {
-    color: #347bff;
+    color: #004ebd;
 }
 .modal-header {
-  background-color: #347bff;
+  background-color: #004ebd;
 }
 .overlay{
-    background-color: rgba(52, 123, 255, 0.7);
+    background-color: rgba(0, 78, 189, 0.7);
 }
 .dl-horizontal dt {
     margin-bottom: 20px;
 }
 .isotope-item .btn-default {
-    color: #347bff;
+    color: #004ebd;
 }
 .subfooter {
-    border-color: #347bff;
-    background-color: rgba(52, 123, 255, 0.7);
+    border-color: #004ebd;
+    background-color: rgba(0, 78, 189, 0.7);
+    color: #ffffff;
+}
+.subfooter a {
+    color: #ffffff;
 }
 @media (min-width:1200px) {
     .banner-caption h1 {
@@ -999,7 +1055,7 @@ h1 span, h2 span, a {
         padding-top: 180px;
     }
     .navbar-default .navbar-toggle .icon-bar {
-        background-color: #347bff;
+        background-color: #004ebd;
     }
     .dl-horizontal dt {
         margin-bottom: 0;
