@@ -116,6 +116,8 @@ blockquote {
 }
 .title {
 	margin-top: 0;
+	font-size: 38px;
+	font-weight: 700;
 }
 
 /* Layout
@@ -296,6 +298,7 @@ blockquote {
 }
 .btn-default {
 	color: #55acee;
+	background-color: #ffffff;
 	border: 1px solid #cccccc;
 }
 .btn-default:hover {
@@ -405,11 +408,11 @@ textarea {
 
 /* Modals
 ---------------------------------- */
-.modal-content {
-	-webkit-border-radius: 0px;
-	-moz-border-radius: 0px;
-	border-radius: 0px;
-}
+/* Bootstrap 5's .modal-content is rounded by default and gives .modal-header/.modal-footer
+   matching top/bottom corner radii automatically. This theme used to force everything
+   square (border-radius: 0), but with a colored .modal-header that left the header's
+   inherited rounded top corners sitting on a square modal window, which looked broken.
+   Letting Bootstrap's own radius apply everywhere keeps the whole modal consistent. */
 .modal-header {
 	background-color: #55acee;
 	color: #ffffff;
@@ -417,13 +420,8 @@ textarea {
 .modal-header h4 {
 	color: #ffffff;
 }
-.modal-header .close {
-	font-weight: 300;
-	color: #FFFFFF;
-	text-shadow: none;
-	filter: alpha(opacity=100);
-	opacity: 1;
-}
+/* Bootstrap 5 replaced .close with .btn-close / .btn-close-white (used directly in the markup),
+   so no custom override is needed here any more. */
 
 /* Large devices (Large desktops 1200px and up) */
 @media (min-width:1200px) {
@@ -455,8 +453,29 @@ textarea {
 .main-navigation .navbar-default .navbar-nav > li > a {
 	color: #fff;
 	padding: 10px 20px;
-	font-size: 18px;
-	font-weight: 300;
+	font-size: clamp(15px, 1.35vw, 21px);
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	text-decoration: none;
+	position: relative;
+	display: inline-block;
+}
+.main-navigation .navbar-default .navbar-nav > li > a::after {
+	content: "";
+	position: absolute;
+	left: 20px;
+	right: 20px;
+	bottom: 4px;
+	height: 2px;
+	background-color: currentColor;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.25s ease-in-out;
+}
+.main-navigation .navbar-default .navbar-nav > li > a:hover::after,
+.main-navigation .navbar-default .navbar-nav > li.active > a::after {
+	transform: scaleX(1);
 }
 .main-navigation .navbar-default .navbar-nav > li.active > a {
 	background-color: transparent;
@@ -487,8 +506,56 @@ textarea {
 	}
 }
 @media (max-width:767px) {
-	.header.navbar-fixed-top {
+	.header.fixed-top {
 		position: absolute;
+	}
+}
+
+/* Bootstrap 5 compatibility shims
+----------------------------------------------------------------------------- */
+/* Bootstrap 5 dropped .navbar-toggle/.icon-bar (replaced by .navbar-toggler/.navbar-toggler-icon).
+   This template's markup and colouring still use the old classes, so their base box model is
+   recreated here (previously supplied by Bootstrap 3's own CSS). */
+.navbar-toggle {
+	position: relative;
+	float: right;
+	padding: 9px 10px;
+	margin-top: 8px;
+	margin-right: 15px;
+	margin-bottom: 8px;
+	background-color: transparent;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+.navbar-toggle .icon-bar {
+	display: block;
+	width: 22px;
+	height: 2px;
+	border-radius: 1px;
+}
+.navbar-toggle .icon-bar + .icon-bar {
+	margin-top: 4px;
+}
+/* Bootstrap 5's .navbar-expand-md hides ".navbar-toggler" at md+ (not our legacy ".navbar-toggle"
+   name), and un-collapses ".navbar-collapse" there via !important regardless of class name — so
+   the menu re-appearing is automatic, but the toggle button needs hiding ourselves at that width. */
+@media (min-width: 768px) {
+	.navbar-toggle {
+		display: none;
+	}
+}
+
+/* Bootstrap 5 removed the .jumbotron component entirely; recreate its base spacing here
+   since site.css only ever overrode its border/background colour, not its box model. */
+.jumbotron {
+	padding: 30px 15px;
+	margin-bottom: 30px;
+	border-radius: 6px;
+}
+@media (min-width: 768px) {
+	.jumbotron {
+		padding: 48px 0;
 	}
 }
 
@@ -555,11 +622,69 @@ textarea {
 	font-size: 12px;
 }
 
-/* Testimonials
+/* Krav Magan periaatteet (principle cards)
 ---------------------------------- */
-.testimonial .media-left {
-	width: 60px;
+.kmt-principles-lead {
+	max-width: 640px;
+	margin-left: auto;
+	margin-right: auto;
+	opacity: 0.9;
 }
+.kmt-principles-grid {
+	margin-top: 10px;
+	row-gap: 30px;
+}
+.kmt-principle {
+	height: 100%;
+	padding: 30px 25px;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.08);
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	border-radius: 8px;
+	-webkit-backdrop-filter: blur(6px);
+	backdrop-filter: blur(6px);
+	transition: transform 0.25s ease-in-out, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+}
+.kmt-principle:hover {
+	transform: translateY(-4px);
+	background-color: rgba(255, 255, 255, 0.14);
+	border-color: rgba(255, 255, 255, 0.3);
+}
+.kmt-principle-icon {
+	display: block;
+	font-size: 34px;
+	color: #55acee;
+	margin-bottom: 15px;
+}
+.kmt-principle h3 {
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+.kmt-principle p {
+	color: #dddddd;
+	font-size: 14px;
+	line-height: 1.6;
+	margin-bottom: 0;
+}
+.kmt-principles-footer {
+	margin-top: 30px;
+	margin-bottom: 0;
+	color: #cccccc;
+	font-style: italic;
+	font-size: 15px;
+}
+/* .pb-clear zeroes the section's bottom padding so it can butt up against the next
+   section with no gap; this section now ends with visible text (the attribution line)
+   instead of just the background image, so it needs its own bottom padding back,
+   scoped narrowly (two-class selector) so the shared .pb-clear utility and the other
+   section that uses it (the video section) are unaffected. */
+.kmt-principles-section.pb-clear {
+	padding-bottom: 60px;
+}
+
 
 /* Social Links
 ---------------------------------- */
@@ -644,60 +769,56 @@ textarea {
 	}
 }
 
-/* Images Overlay
+/* Info cards (Tietoa grid)
 ----------------------------------------------------------------------------- */
-.overlay-container {
+/* Replaces the old two-piece image-box + separate button: the whole card is now one clickable
+   link, with the label sitting over the image as a heading bar instead of a hover-only overlay. */
+.kmt-info-card {
 	position: relative;
 	display: block;
 	overflow: hidden;
+	border-radius: 4px;
+	text-decoration: none;
+	color: #ffffff;
 }
-.overlay {
-	position: absolute;
-	top: 0;
-	bottom: -1px;
-	left: 0;
-	right: -1px;
-	background-color: rgba(85, 172, 238, 0.9);
-	cursor: pointer;
-	overflow: hidden;
-	opacity: 0;
-	filter: alpha(opacity=0);
-	-webkit-transform: scale(0.8);
-	transform: scale(0.8);
-	-webkit-transition: all linear 0.2s;
-	-moz-transition: all linear 0.2s;
-	-ms-transition: all linear 0.2s;
-	-o-transition: all linear 0.2s;
-	transition: all linear 0.2s;
-}
-.overlay:hover {
+.kmt-info-card:hover,
+.kmt-info-card:focus {
+	color: #ffffff;
 	text-decoration: none;
 }
-.overlay span {
-	position: absolute;
-	display: block;
-	bottom: 10px;
-	text-align: center;
+.kmt-info-card-img {
 	width: 100%;
-	color: #ffffff;
-	font-size: 13px;
-	font-weight: 300;
+	display: block;
+	-webkit-transition: -webkit-transform 0.3s ease-in-out;
+	transition: transform 0.3s ease-in-out;
 }
-.overlay i {
+.kmt-info-card:hover .kmt-info-card-img,
+.kmt-info-card:focus .kmt-info-card-img {
+	-webkit-transform: scale(1.05);
+	transform: scale(1.05);
+}
+.kmt-info-card-caption {
 	position: absolute;
-	left: 50%;
-	top: 50%;
-	font-size: 18px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	padding: 12px 15px;
+	background-color: rgba(52, 123, 255, 0.85);
 	color: #ffffff;
-	margin-top: -8px;
-	margin-left: -8px;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
 	text-align: center;
+	-webkit-transition: background-color 0.2s ease-in-out;
+	transition: background-color 0.2s ease-in-out;
 }
-.overlay-container:hover .overlay {
-	opacity: 1;
-	filter: alpha(opacity=100);
-	-webkit-transform: scale(1);
-	transform: scale(1);
+.kmt-info-card:hover .kmt-info-card-caption,
+.kmt-info-card:focus .kmt-info-card-caption {
+	background-color: rgba(51, 51, 51, 0.9);
+}
+.kmt-info-card-caption i {
+	margin-right: 8px;
 }
 
 /** KMT CUSTOM **/
@@ -748,7 +869,7 @@ div#video-gallery img {
     z-index: 3;
 }
 #banner-image {
-    background: url(/img/video_placeholder.jpg) no-repeat center center fixed;
+    background: url(../img/video_placeholder.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -857,8 +978,8 @@ h1 span, h2 span, a {
     }
 }
 @media (max-width: 998px) {
-    .footer-content .embed-responsive-4by3 {
-        padding-bottom: 100%;
+    .footer-content .ratio-4x3 {
+        --bs-aspect-ratio: 100%;
     }
     .header {
         background-color: rgba(255,255,255,0.8);
@@ -1179,4 +1300,39 @@ h1 span, h2 span, a {
         -webkit-transform: translateX(0rem) scale(1);
         transform: translateX(0rem) scale(1);
     }
+}
+
+/* Cookie / tracking consent banner
+----------------------------------------------------------------------------- */
+.cookie-consent {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2000;
+    background-color: rgba(34, 34, 34, 0.95);
+    color: #ffffff;
+    padding: 15px 20px;
+}
+.cookie-consent-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+.cookie-consent-inner p {
+    margin: 0;
+    font-size: 14px;
+}
+.cookie-consent-actions {
+    flex: none;
+    white-space: nowrap;
+}
+.cookie-consent-actions .btn {
+    text-transform: none;
+    padding: 6px 16px;
+    font-size: 14px;
 }

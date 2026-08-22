@@ -3,36 +3,69 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Krav Maga Tapiola</title>
+  <title>Krav Maga Tapiola – Itsepuolustuskurssit Espoossa</title>
   <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="img/logo.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#347bff">
   <meta name="keywords" content="Krav Maga Tapiola Espoo Suomi FEKM PKMI" />
   <meta name="description"
     content="Krav Maga Tapiola kuuluu Pohjolan Krav Maga Itsepuolustusliiton (PKMI) kautta maailman suurimpaan Krav Maga -liittoon, Euroopan Krav Maga -liittoon (FEKM-RD)" />
-  <!-- Facebook Pixel Code -->
+  <link rel="canonical" href="https://kravmagatapiola.fi/" />
+
+  <!-- Resource hints: warm up the connections to third-party origins actually used on this
+       page (CDN, Google Fonts loader, YouTube embeds, myClub booking widget) so their first
+       request doesn't pay the full DNS+TLS setup cost when it's finally needed. -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://ajax.googleapis.com">
+  <link rel="dns-prefetch" href="https://www.youtube.com">
+  <link rel="dns-prefetch" href="https://d2ubdm6yoox6gh.cloudfront.net">
+  <link rel="dns-prefetch" href="https://kravmaga.myclub.fi">
+
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fi_FI" />
+  <meta property="og:site_name" content="Krav Maga Tapiola" />
+  <meta property="og:title" content="Krav Maga Tapiola – Itsepuolustuskurssit Espoossa" />
+  <meta property="og:description"
+    content="Krav Maga Tapiola kuuluu Pohjolan Krav Maga Itsepuolustusliiton (PKMI) kautta maailman suurimpaan Krav Maga -liittoon, Euroopan Krav Maga -liittoon (FEKM-RD)" />
+  <meta property="og:url" content="https://kravmagatapiola.fi/" />
+  <meta property="og:image" content="https://kravmagatapiola.fi/img/logo.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Krav Maga Tapiola – Itsepuolustuskurssit Espoossa" />
+  <meta name="twitter:description"
+    content="Krav Maga Tapiola kuuluu Pohjolan Krav Maga Itsepuolustusliiton (PKMI) kautta maailman suurimpaan Krav Maga -liittoon, Euroopan Krav Maga -liittoon (FEKM-RD)" />
+  <meta name="twitter:image" content="https://kravmagatapiola.fi/img/logo.png" />
+
+  <!-- Facebook Pixel Code (loaded only after cookie consent is granted, see #cookie-consent script near </body>) -->
   <script>
-    !function (f, b, e, v, n, t, s) {
-      if (f.fbq) return; n = f.fbq = function () {
-        n.callMethod ?
-          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-      }; if (!f._fbq) f._fbq = n;
-      n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
-      t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
-    }(window,
-      document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1863981033824615', {
-    });
-    fbq('track', 'PageView');
+    window.kmtLoadFacebookPixel = function () {
+      !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return; n = f.fbq = function () {
+          n.callMethod ?
+            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        }; if (!f._fbq) f._fbq = n;
+        n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+        t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+      }(window,
+        document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1863981033824615', {
+      });
+      fbq('track', 'PageView');
+    };
   </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=1863981033824615&ev=PageView&noscript=1" />
-  </noscript>
   <!-- End Facebook Pixel Code -->
 
-  <!-- Bootstrap core CSS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS (jsDelivr, with a local fallback if the CDN request fails) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    onerror="this.onerror=null;document.write('<link href=\'css/bootstrap.min.css\' rel=\'stylesheet\'>')">
+
+  <!-- Font Awesome 7 (self-hosted) + v4 compatibility layer so the existing "fa fa-*" markup keeps working -->
+  <link href="css/fontawesome/all.min.css" rel="stylesheet">
+  <link href="css/fontawesome/v4-shims.min.css" rel="stylesheet">
+  <link href="css/fontawesome/v4-font-face.min.css" rel="stylesheet">
 
   <link href="css/animate.css" rel="stylesheet">
   <link href="css/animations.css" rel="stylesheet">
@@ -47,7 +80,7 @@
 
   <!-- header start -->
   <!-- ================ -->
-  <header class="header fixed clearfix navbar navbar-fixed-top">
+  <header class="header fixed clearfix navbar fixed-top">
     <div class="container">
       <div class="row">
         <div class="col-md-3">
@@ -79,13 +112,13 @@
 
               <!-- navbar start -->
               <!-- ================ -->
-              <nav class="navbar navbar-default" role="navigation">
+              <nav class="navbar navbar-expand-md navbar-default" role="navigation">
                 <div class="container-fluid">
 
                   <!-- Toggle get grouped for better mobile display -->
                   <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
-                      <span class="sr-only">Toggle navigation</span>
+                    <button type="button" class="navbar-toggle" data-bs-toggle="collapse" data-bs-target="#navbar-collapse-1">
+                      <span class="visually-hidden">Toggle navigation</span>
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
@@ -96,7 +129,7 @@
                   <div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                       <li>
-                        <a href="#treenit">Treenit</a>
+                        <a href="#treenit">Ilmoittaudu!</a>
                       </li>
                       <li>
                         <a href="#tapahtumat">Tapahtumat</a>
@@ -135,7 +168,7 @@
     <div class="banner-caption">
       <div class="container">
         <div class="row">
-          <div class="col-md-8 col-md-offset-2">
+          <div class="col-md-8 offset-md-2">
             <div class="text-center">
               <p class="smooth-scroll">
                 <a href="#join" class="btn btn-primary btn-lg">Ilmoittaudu</a>
@@ -183,14 +216,14 @@
   <div class="translucent-bg blue blue-banner">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12">
+        <div class="col-12">
           <div class="space">
           </div>
           <h3 class="text-center">
             Krav Maga Tapiola kuuluu
             <a href="http://www.krav-maga.fi/">Pohjolan Krav Maga Itsepuolustusliiton (PKMI)</a>
             kautta maailman suurimpaan Krav Maga -liittoon,
-            <a href="https://www.krav-maga.net/en/">Euroopan Krav Maga -liittoon (FEKM, Richard Douieb)</a>
+            <a href="https://www.krav-maga.net/en/">Euroopan Krav Maga -liittoon (FEKM, perustaja Richard Douieb)</a>
           </h3>
           <div class="space">
           </div>
@@ -202,7 +235,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1 id="treenit" class="text-center title">Treenit</h1>
+          <h2 id="treenit" class="text-center title">Treenit</h2>
           <div class="space"></div>
           <div class="row">
             <div class="col-md-6">
@@ -230,7 +263,7 @@
             <div class="col-md-6">
               <h3 id="join">Hinnat ja ilmoittautuminen</h3>
               <p>
-                <i class="fa fa-info-circle text-info"></i>&nbsp;Klikkaa haluamaasi riviä (siirtyminen ilmoittautumiseen
+                <i class="fa fa-info-circle text-info" aria-hidden="true"></i>&nbsp;Klikkaa haluamaasi riviä (siirtyminen ilmoittautumiseen
                 jäsenpalveluun)
               </p>
               <strong>Peruskurssit</strong>
@@ -246,7 +279,7 @@
               <p>
                 <small>Hinta sisältää: Krav Maga -lisenssi (PKMI ja FEKM jäsenyys), Krav Maga -passi (uusille oppilaille).</small>
               </p>
-              <span class="label label-info">Huom! Opiskelija-alennus -20&nbsp;%.</span>
+              <span class="badge text-bg-info">Huom! Opiskelija-alennus -20&nbsp;%.</span>
             </div>
           </div>  
           <div class="space"></div>
@@ -257,7 +290,7 @@
   <div class="translucent-bg blue blue-banner">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12">
+        <div class="col-12">
           <div class="space">
           </div>
           <h2 class="text-center">Harjoittelu</h2>
@@ -289,9 +322,9 @@
           </p>
           <ul class="list-unstyled">
             <li>
-              <i class="fa fa-caret-right pr-10 text-colored"></i>10 treenikertaa (15 h)</li>
+              <i class="fa fa-caret-right pr-10 text-colored" aria-hidden="true"></i>10 treenikertaa (15 h)</li>
           </ul>
-          <img src="img/kamppailukeskus.jpg" alt="Esport Arena, kamppailukeskus" class="img-rounded" />
+          <img src="img/kamppailukeskus.jpg" alt="Esport Arena, kamppailukeskus" class="rounded" loading="lazy" />
           <div class="space"></div>
         </div>
         <div class="col-md-6">
@@ -299,25 +332,25 @@
             <div class="panel panel-default">
               <div class="panel-heading" role="tab" id="heading0">
                 <h4 class="panel-title">
-                  <a class="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapse0"
+                  <a class="collapse" data-bs-toggle="collapse" data-bs-parent="#accordion" href="#collapse0"
                     aria-expanded="true" aria-controls="collapse0">
                     Miten aloitan?
                   </a>
                 </h4>
               </div>
-              <div id="collapse0" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading0">
+              <div id="collapse0" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="heading0">
                 <div class="panel-body">
                   <p>Vaihda pukuhuoneessa sisäliikuntakamppeet yllesi, poista korut ja sormukset.</p>
                   <p>
                     Tule peruskurssin aloituspäivänä noin 20 minuuttia ennen treenien alkamista paikalle, jotta
                     paperityöt saadaan tehtyä ja
                     pääset aloittaamaan treenit ajoissa.
-                    <ul>
-                      <li>Jos peruskurssin aloituspäivä on jo mennyt, niin ota yhteyttä sähköpostilla, jotta saadaan
-                        katsottua
-                        ehtisitkö vielä kurssille mukaan.</li>
-                    </ul>
                   </p>
+                  <ul>
+                    <li>Jos peruskurssin aloituspäivä on jo mennyt, niin ota yhteyttä sähköpostilla, jotta saadaan
+                      katsottua
+                      ehtisitkö vielä kurssille mukaan.</li>
+                  </ul>
                   <p>
                     Ota treeneihin mukaan normaali sisäliikuntavarustus ja juomapullo sekä reipasta liikuntahenkeä. Jos
                     haluat käydä treenien
@@ -331,7 +364,7 @@
             <div class="panel panel-default">
               <div class="panel-heading" role="tab" id="headingOne">
                 <h4 class="panel-title">
-                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                  <a class="collapsed" data-bs-toggle="collapse" data-bs-parent="#accordion" href="#collapseOne"
                     aria-expanded="false" aria-controls="collapseOne">
                     Harjoitusasu, suojat ja varusteet
                   </a>
@@ -366,7 +399,7 @@
             <div class="panel panel-default">
               <div class="panel-heading" role="tab" id="headingTwo">
                 <h4 class="panel-title">
-                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
+                  <a class="collapsed" data-bs-toggle="collapse" data-bs-parent="#accordion" href="#collapseTwo"
                     aria-expanded="false" aria-controls="collapseTwo">
                     Kuka voi aloittaa lajin?
                   </a>
@@ -381,12 +414,12 @@
                     välisillä
                     spurteilla.
                   </p>
+                  <p>Jos taas olet jo aiemmin harjoitellut jotain kamppailulajeja ja kuntosi on rautaa, niin silloin
+                    pääset
+                    kehittämään nopeammin teknisiä taitojasi ja itsepuolustuksen harjoittelu voidaan viedä heti
+                    vaativammalle
+                    tasolle.</p>
                   <p>
-                    <p>Jos taas olet jo aiemmin harjoitellut jotain kamppailulajeja ja kuntosi on rautaa, niin silloin
-                      pääset
-                      kehittämään nopeammin teknisiä taitojasi ja itsepuolustuksen harjoittelu voidaan viedä heti
-                      vaativammalle
-                      tasolle.</p>
                     Krav Magan harjoittelu edellyttää nuhteettomuutta. Väkivaltarikokseen tai vastaavaan tuomittavaan
                     tekoon syyllistyminen on
                     este kurssille osallistumiselle.
@@ -398,7 +431,7 @@
             <div class="panel panel-default">
               <div class="panel-heading" role="tab" id="headingThree">
                 <h4 class="panel-title">
-                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"
+                  <a class="collapsed" data-bs-toggle="collapse" data-bs-parent="#accordion" href="#collapseThree"
                     aria-expanded="false" aria-controls="collapseThree">
                     Onko harjoittelu vaarallista?
                   </a>
@@ -424,7 +457,7 @@
             <div class="panel panel-default">
               <div class="panel-heading" role="tab" id="heading4">
                 <h4 class="panel-title">
-                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse4"
+                  <a class="collapsed" data-bs-toggle="collapse" data-bs-parent="#accordion" href="#collapse4"
                     aria-expanded="false" aria-controls="collapse4">
                     Eteneminen
                   </a>
@@ -475,82 +508,9 @@
       </div>
     </div>
   </div>
-	<!--
-  <div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
-    <div class="container">
-      <div class="space">
-      </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <h1 id="instructors" class="text-center title">Tiimi</h1>
-        </div>
-      </div>
-      <div class="row">
-	    <div class="col-xs-12">
-          <h3 class="text-center title">Ohjaajat (FEKM-RD)</h1>
-        </div>
-        <div class="col-md-4">
-          <img src="img/Teemu.jpg" alt="Teemu" class="img-circle center-block" width="300">
-          <div class="text-center h3">Teemu</div>
-        </div>
-        <div class="col-md-4">
-          <img src="img/Mikko.jpg" alt="Mikko" class="img-circle center-block" width="300">
-          <div class="text-center h3">Mikko</div>
-        </div>
-        <div class="col-md-4">
-          <img src="img/Tuomo.jpg" alt="Tuomo" class="img-circle center-block" width="300">
-          <div class="text-center h3">Tuomo</div>
-        </div>
-		<div class="col-md-4">
-		  <img src="img/Kaj.jpg" alt="Kaj" class="img-circle center-block" width="300">
-          <div class="text-center h3">Kaj</div>
-        </div>
-        <div class="col-md-4">
-          <img src="img/Merit.jpg" alt="Merit" class="img-circle center-block" width="300">
-          <div class="text-center h3">Merit</div>
-        </div>
-        <div class="col-md-4">
-          <img src="img/Helmi.jpg" alt="Helmi" class="img-circle center-block" width="300">
-          <div class="text-center h3">Helmi</div>
-        </div>
-      </div>
-      <div class="row">
-	    <div class="col-xs-12">
-          <h3 class="text-center title">Apuohjaajat</h1>
-        </div>
-        <div class="col-md-3">
-          <img src="img/Jouni.jpg" alt="Jouni" class="img-circle center-block" width="300">
-          <div class="text-center h3">Jouni</div>
-        </div>
-      </div>
-	  
-    </div>
-    <div class="space">
-    </div>
-  </div>
- -->
   <div class="section">
     <div class="container object-non-visible" data-animation-effect="fadeIn">
-      <h1 id="tapahtumat" class="title text-center">Seminaarit ja tapahtumat</h1>
-      <!--
-      <div class="row">
-        <div class="col-md-6">
-          <h3>KESÄLEIRI ESPOOSSA, 25.-26. ELOKUUTA 2018</h3>
-          <ul>
-            <li>5 ohjaajaa</li>
-            <li>2 tasoryhmää</li>
-            <li>yli 10 h treeniä ja oppitunteja</li>
-            <li>Majoittuminen ja illanvietto treenipaikan yhteydessä, Nuuksion kansallispuiston vieressä järven rannalla</li>
-          </ul>
-          <a href="https://kravmaga.myclub.fi/flow/events/918008" class="btn btn-primary btn-lg">Ilmoittaudu kesäleirille</a>
-          <div class="space"></div>
-          <div>
-            <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fkravmaga.myclub.fi%2Fflow%2Fevents%2F918008&layout=button&size=small&mobile_iframe=true&appId=611400022376737&width=46&height=20"
-              width="46" height="20" style="border:none;overflow:hidden" scrolling="no" allowTransparency="true"></iframe>
-          </div>
-        </div>
-      </div>
-      <div class="space"></div>-->
+      <h2 id="tapahtumat" class="title text-center">Seminaarit ja tapahtumat</h2>
       <div class="row">
 		<div class="col-md-6">
 			<h3>Tulevat seminaarit ja leirit</h3>
@@ -571,33 +531,33 @@
     <div class="container object-non-visible" data-animation-effect="fadeIn">
       <div class="container">
         <div class="row">
-          <div class="col-xs-12">
-            <h1 class="text-center title" id="videos">Videot</h1>
+          <div class="col-12">
+            <h2 class="text-center title" id="videos">Videot</h2>
             <div class="space"></div>
             <div id="video-gallery" class="row">
-              <div class="col-lg-6 col-xs-12 thumb" data-src="https://www.youtube.com/watch?v=mmEK-uWDKF8">
-                <a href="">
-                  <img src="img/intro.jpg" class="img-rounded img-responsive" alt="Krav Maga Tapiola esittelyvideo" />
+              <div class="col-lg-6 col-12 thumb" data-src="https://www.youtube.com/watch?v=mmEK-uWDKF8">
+                <a href="#" role="button">
+                  <img src="img/intro.jpg" class="rounded img-fluid" loading="lazy" alt="Krav Maga Tapiola esittelyvideo" />
                 </a>
               </div>
-              <div class="col-lg-6 col-xs-12 thumb" data-src="https://www.youtube.com/watch?v=zgLtU6fnx2U">
-                <a href="">
-                  <img src="img/teaser1.jpg" class="img-rounded img-responsive" alt="Krav Maga Tapiola" />
+              <div class="col-lg-6 col-12 thumb" data-src="https://www.youtube.com/watch?v=zgLtU6fnx2U">
+                <a href="#" role="button">
+                  <img src="img/teaser1.jpg" class="rounded img-fluid" loading="lazy" alt="Krav Maga Tapiola" />
                 </a>
               </div>
-              <div class="col-lg-4 col-xs-12 thumb" data-src="https://www.youtube.com/watch?v=Tk4hkr2k_FI">
-                <a href="">
-                  <img src="img/teaser2.jpg" class="img-rounded img-responsive" alt="Krav Maga Tapiola" />
+              <div class="col-lg-4 col-12 thumb" data-src="https://www.youtube.com/watch?v=Tk4hkr2k_FI">
+                <a href="#" role="button">
+                  <img src="img/teaser2.jpg" class="rounded img-fluid" loading="lazy" alt="Krav Maga Tapiola" />
                 </a>
               </div>
-              <div class="col-lg-4 col-xs-12 thumb" data-src="https://www.youtube.com/watch?v=3e5erzTEiNY">
-                <a href="">
-                  <img src="img/teaser3.jpg" class="img-rounded img-responsive" alt="Krav Maga Tapiola" />
+              <div class="col-lg-4 col-12 thumb" data-src="https://www.youtube.com/watch?v=3e5erzTEiNY">
+                <a href="#" role="button">
+                  <img src="img/teaser3.jpg" class="rounded img-fluid" loading="lazy" alt="Krav Maga Tapiola" />
                 </a>
               </div>
-              <div class="col-lg-4 col-xs-12 thumb" data-src="https://www.youtube.com/watch?v=N63rhdm20_s">
-                <a href="">
-                  <img src="img/teaser6.jpg" class="img-rounded img-responsive" alt="Krav Maga Tapiola" />
+              <div class="col-lg-4 col-12 thumb" data-src="https://www.youtube.com/watch?v=N63rhdm20_s">
+                <a href="#" role="button">
+                  <img src="img/teaser6.jpg" class="rounded img-fluid" loading="lazy" alt="Krav Maga Tapiola" />
                 </a>
               </div>
             </div>
@@ -606,48 +566,67 @@
       </div>
     </div>
   </div>
-  <div class="section translucent-bg bg-image-2 pb-clear">
+  <div class="section kmt-principles-section translucent-bg bg-image-2 pb-clear">
     <div class="container object-non-visible" data-animation-effect="fadeIn">
 
-      <h1 id="information" class="title text-center">Krav Magan periaatteet</h1>
+      <h2 id="information" class="title text-center">Krav Magan periaatteet</h2>
+      <p class="lead text-center kmt-principles-lead">
+        Krav Maga rakentuu muutamalle yksinkertaiselle ja käytännölliselle periaatteelle.
+      </p>
 
       <div class="space"></div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="media testimonial">
-            <div class="media-body">
-              <blockquote>
-                <p>Ennaltaehkäisy / uhan välttäminen</p>
-                <p>Uhan välttäminen puhumalla, mikäli se on mahdollista</p>
-                <p>Ihmiskehon luontaisten refleksien hyödyntäminen</p>
-                <p>Hyökkääminen ihmiskehon arkoihin paikkoihin</p>
-              </blockquote>
-            </div>
+      <div class="row kmt-principles-grid">
+        <div class="col-sm-6 col-lg-4">
+          <div class="kmt-principle">
+            <i class="fa-solid fa-shield-halved kmt-principle-icon" aria-hidden="true"></i>
+            <h3>Ennaltaehkäisy</h3>
+            <p>Uhkaa pyritään ensisijaisesti välttämään – tarvittaessa myös puhumalla.</p>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="media testimonial">
-            <div class="media-body">
-              <blockquote>
-                <p>
-                  Mahdollisimman nopea siirtyminen puolustautumisesta hyökkäämiseen. Torjunnat ja vastahyökkäykset
-                  tehdään aina lyhyintä tietä
-                </p>
-
-                <p>Minkä tahansa saatavilla olevan apuvälineen hyödyntäminen</p>
-                <p>Sääntöjä ei ole</p>
-                <footer>Imi Lichtenfeld</footer>
-              </blockquote>
-            </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="kmt-principle">
+            <i class="fa-solid fa-hand-fist kmt-principle-icon" aria-hidden="true"></i>
+            <h3>Luontaiset refleksit</h3>
+            <p>Tekniikat hyödyntävät ihmiskehon luontaisia refleksejä.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="kmt-principle">
+            <i class="fa-solid fa-bullseye kmt-principle-icon" aria-hidden="true"></i>
+            <h3>Arat kohdat</h3>
+            <p>Vastahyökkäykset kohdistetaan ihmiskehon arkoihin paikkoihin.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="kmt-principle">
+            <i class="fa-solid fa-route kmt-principle-icon" aria-hidden="true"></i>
+            <h3>Lyhin tie</h3>
+            <p>Puolustuksesta siirrytään hyökkäykseen mahdollisimman nopeasti – torjunnat ja vastahyökkäykset tehdään aina lyhyintä tietä.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="kmt-principle">
+            <i class="fa-solid fa-toolbox kmt-principle-icon" aria-hidden="true"></i>
+            <h3>Kaikki käy avuksi</h3>
+            <p>Minkä tahansa saatavilla olevan apuvälineen hyödyntäminen on sallittua.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="kmt-principle">
+            <i class="fa-solid fa-ban kmt-principle-icon" aria-hidden="true"></i>
+            <h3>Sääntöjä ei ole</h3>
+            <p>Itsepuolustustilanteessa ei ole sääntöjä.</p>
           </div>
         </div>
       </div>
+
+      <p class="kmt-principles-footer text-center">— Imi Lichtenfeld, Krav Magan perustaja</p>
     </div>
   </div>
 
   <div class="section">
     <div class="container">
-      <h1 class="text-center title">Tietoa</h1>
+      <h2 class="text-center title">Tietoa</h2>
       <div class="separator"></div>
       <p class="lead text-center">
         Krav Maga on israelilainen lähitaistelu- ja itsepuolustusjärjestelmä
@@ -657,37 +636,28 @@
         <div class="col-md-12">
           <div class="isotope-container row grid-space-20">
             <div class="col-sm-6 col-md-4 isotope-item liitot">
-              <div class="image-box">
-                <div class="overlay-container">
-                  <img src="img/douieb.jpg" alt="Richard Douieb">
-                  <a class="overlay" data-toggle="modal" data-target="#modal-4">
-                    <i class="fa fa-search-plus"></i>
-                    <span>FEKM – Fédération Européenne de Krav Maga</span>
-                  </a>
-                </div>
-                <a class="btn btn-default btn-block" data-toggle="modal" data-target="#modal-4">FEKM</a>
-              </div>
+              <a href="#" class="kmt-info-card" data-bs-toggle="modal" data-bs-target="#modal-4" role="button">
+                <img src="img/douieb.jpg" class="kmt-info-card-img" alt="Richard Douieb">
+                <span class="kmt-info-card-caption"><i class="fa fa-search-plus" aria-hidden="true"></i>FEKM</span>
+              </a>
               <!-- Modal -->
               <div class="modal fade" id="modal-4" tabindex="-1" role="dialog" aria-labelledby="modal-4-label"
                 aria-hidden="true">
                 <div class="modal-dialog modal-lg">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal">
-                        <span aria-hidden="true">&times;</span>
-                        <span class="sr-only">Sulje</span>
-                      </button>
-                      <h4 class="modal-title" id="modal-4-label">FEKM – Fédération Européenne de Krav Maga</h4>
+                      <h4 class="modal-title" id="modal-4-label">FEKM – European Krav Maga Federation</h4>
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Sulje"></button>
                     </div>
                     <div class="modal-body">
 
-                      <h3>FEKM – Fédération Européenne de Krav Maga</h3>
+                      <h3>FEKM – European Krav Maga Federation</h3>
                       <div class="row">
                         <div class="col-md-6">
                           <p>
                             Krav Maga on nykyisin maailmanlaajuisesti levinnyt monien kansainvälisten liittojen
                             alaisuuteen. Lajiliittoja ovat The Israeli
-                            Krav Maga Association (IKMA), Federation Europeenne de Krav-Maga (FEKM), The Krav Maga
+                            Krav Maga Association (IKMA), European Krav Maga Federation (FEKM), The Krav Maga
                             Association
                             of America (KMAA), International Krav Maga Federation (IKMF) ja Krav Maga Global (KMG).
                           </p>
@@ -697,17 +667,12 @@
                             FEKM lähes 10 000 jäsenellään.
                           </p>
                           <p>
-                            Liiton johdossa toimii lajin perustaja Imrich Lichtenfeldin oppilas Richard Douieb (6. dan).
-                            Richard Douieb aloitti Imi Lichtenfeldin
-                            virallisena edustajana Euroopassa vuonna 1987, jolloin hän perusti Ranskassa Euroopan Krav
-                            Maga
-                            –liiton (FEKM). Tällä hetkellä FEKM:n rekisteröityjen harrastajien määrä on yli 15 000.
-                            FEKM:llä
-                            on toimintaa ja kansalliset lajiliitot kymmenessä maassa: Ranska, Belgia, Sveitsi, Puola,
-                            Suomi,
-                            Portugali, Italia, Espanja, Englanti ja Luxemburg. Lisäksi liitolla on Krav Maga –toimintaa
-                            Kanadan
-                            Montrealissa ja Norjassa ollaan parhaillaan käynnistämässä FEKM:n Krav Maga koulua.
+                            Liiton perusti Imi Lichtenfeldin oppilas Richard Douieb (6. dan), joka aloitti Imi
+                            Lichtenfeldin virallisena edustajana Euroopassa vuonna 1987 ja perusti Ranskassa Euroopan
+                            Krav Maga -liiton (FEKM) vuonna 1997. Liiton puheenjohtajana toimii nykyisin Steve
+                            Schmitt, ja liiton nimessä käytetään edelleen Richard Douiebin kunniaksi lyhennettä
+                            FEKM-RD. FEKM:n rekisteröityjen harrastajien määrä on yli 20 000, ja sillä on kansalliset
+                            lajiliitot noin 15 Euroopan maassa sekä toimintaa muun muassa Kanadassa ja Kamerunissa.
                           </p>
                           <p>
                             FEKM:n kaikissa Krav Maga -kouluissa maasta riippumatta opetetaan samalla tavalla samaa
@@ -717,15 +682,15 @@
                           </p>
                         </div>
                         <div class="col-md-6">
-                          <div class="embed-responsive embed-responsive-4by3">
-                            <iframe class="embed-responsive-item embedded-video"
+                          <div class="ratio ratio-4x3">
+                            <iframe class="embedded-video"
                               data-src="https://www.youtube.com/embed/ilw2ZKoZLTI" allowfullscreen></iframe>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Sulje</button>
+                      <button type="button" class="btn btn-sm btn-default" data-bs-dismiss="modal">Sulje</button>
                     </div>
                   </div>
                 </div>
@@ -735,16 +700,10 @@
             </div>
 
             <div class="col-sm-6 col-md-4 isotope-item liitot">
-              <div class="image-box">
-                <div class="overlay-container">
-                  <img src="img/km_musta.png" alt="Krav Maga">
-                  <a class="overlay" data-toggle="modal" data-target="#project-3">
-                    <i class="fa fa-search-plus"></i>
-                    <span>PKMI – Pohjolan Krav Maga itsepuolustusliitto</span>
-                  </a>
-                </div>
-                <a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-3">PKMI</a>
-              </div>
+              <a href="#" class="kmt-info-card" data-bs-toggle="modal" data-bs-target="#project-3" role="button">
+                <img src="img/km_musta.png" class="kmt-info-card-img" alt="Krav Maga">
+                <span class="kmt-info-card-caption"><i class="fa fa-search-plus" aria-hidden="true"></i>PKMI</span>
+              </a>
               <!-- Modal -->
               <div class="modal fade" id="project-3" tabindex="-1" role="dialog" aria-labelledby="project-3-label"
                 aria-hidden="true">
@@ -752,11 +711,8 @@
                   <div class="modal-content">
 
                     <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal">
-                        <span aria-hidden="true">&times;</span>
-                        <span class="sr-only">Sulje</span>
-                      </button>
                       <h4 class="modal-title" id="project-3-label">PKMI – Pohjolan Krav Maga itsepuolustusliitto</h4>
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Sulje"></button>
                     </div>
                     <div class="modal-body">
 
@@ -786,12 +742,12 @@
                             Kouvolan Itsepuolustus (Kouvola) sekä Ronin Krav Maga (Eura).</p>
                         </div>
                         <div class="col-md-6">
-                          <img src="img/km_musta.png" alt="Krav Maga">
+                          <img src="img/km_musta.png" alt="Krav Maga" loading="lazy">
                         </div>
                       </div>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Sulje</button>
+                      <button type="button" class="btn btn-sm btn-default" data-bs-dismiss="modal">Sulje</button>
                     </div>
                   </div>
                 </div>
@@ -800,27 +756,18 @@
             </div>
 
             <div class="col-sm-6 col-md-4 isotope-item liitot">
-              <div class="image-box">
-                <div class="overlay-container">
-                  <img src="img/belt.jpg" alt="">
-                  <a class="overlay" data-toggle="modal" data-target="#project-5">
-                    <i class="fa fa-search-plus"></i>
-                    <span>Tasojärjestelmä</span>
-                  </a>
-                </div>
-                <a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-5">Tasojärjestelmä</a>
-              </div>
+              <a href="#" class="kmt-info-card" data-bs-toggle="modal" data-bs-target="#project-5" role="button">
+                <img src="img/belt.jpg" class="kmt-info-card-img" alt="Krav Maga -vyöarvot">
+                <span class="kmt-info-card-caption"><i class="fa fa-search-plus" aria-hidden="true"></i>Tasojärjestelmä</span>
+              </a>
               <div class="modal fade" id="project-5" tabindex="-1" role="dialog" aria-labelledby="project-5-label"
                 aria-hidden="true">
                 <div class="modal-dialog modal-lg">
                   <div class="modal-content">
 
                     <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal">
-                        <span aria-hidden="true">&times;</span>
-                        <span class="sr-only">Sulje</span>
-                      </button>
                       <h4 class="modal-title" id="project-5-label">Tasojärjestelmä</h4>
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Sulje"></button>
                     </div>
                     <div class="modal-body">
                       <h3>Tasojärjestelmä</h3>
@@ -849,8 +796,8 @@
 
                         </div>
                         <div class="col-md-6">
-                          <div class="embed-responsive embed-responsive-4by3">
-                            <iframe class="embed-responsive-item embedded-video"
+                          <div class="ratio ratio-4x3">
+                            <iframe class="embedded-video"
                               data-src="https://www.youtube.com/embed/ELdI3PU0Yws" allowfullscreen></iframe>
                           </div>
                         </div>
@@ -858,7 +805,7 @@
 
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Sulje</button>
+                      <button type="button" class="btn btn-sm btn-default" data-bs-dismiss="modal">Sulje</button>
                     </div>
                   </div>
                 </div>
@@ -867,16 +814,10 @@
             </div>
 
             <div class="col-sm-6 col-md-4 isotope-item kravmaga">
-              <div class="image-box">
-                <div class="overlay-container">
-                  <img src="img/km_action.jpg" alt="Krav Maga in action">
-                  <a class="overlay" data-toggle="modal" data-target="#project-6">
-                    <i class="fa fa-search-plus"></i>
-                    <span>Krav Maga</span>
-                  </a>
-                </div>
-                <a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-6">Krav Maga</a>
-              </div>
+              <a href="#" class="kmt-info-card" data-bs-toggle="modal" data-bs-target="#project-6" role="button">
+                <img src="img/km_action.jpg" class="kmt-info-card-img" alt="Krav Maga in action">
+                <span class="kmt-info-card-caption"><i class="fa fa-search-plus" aria-hidden="true"></i>Krav Maga</span>
+              </a>
               <!-- Modal -->
               <div class="modal fade" id="project-6" tabindex="-1" role="dialog" aria-labelledby="project-6-label"
                 aria-hidden="true">
@@ -884,11 +825,8 @@
                   <div class="modal-content">
 
                     <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal">
-                        <span aria-hidden="true">&times;</span>
-                        <span class="sr-only">Sulje</span>
-                      </button>
                       <h4 class="modal-title" id="project-6-label">Krav Maga</h4>
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Sulje"></button>
                     </div>
                     <div class="modal-body">
                       <h3>Krav Maga</h3>
@@ -920,12 +858,12 @@
                           </p>
                         </div>
                         <div class="col-md-6">
-                          <img src="img/km_action.jpg" alt="Krav Maga in action">
+                          <img src="img/km_action.jpg" alt="Krav Maga in action" loading="lazy">
                         </div>
                       </div>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Sulje</button>
+                      <button type="button" class="btn btn-sm btn-default" data-bs-dismiss="modal">Sulje</button>
                     </div>
                   </div>
                 </div>
@@ -934,16 +872,10 @@
             </div>
 
             <div class="col-sm-6 col-md-4 isotope-item kravmaga">
-              <div class="image-box">
-                <div class="overlay-container">
-                  <img src="img/defence.jpg" alt="Krav Maga itsepuolustus">
-                  <a class="overlay" data-toggle="modal" data-target="#project-7">
-                    <i class="fa fa-search-plus"></i>
-                    <span>Itsepuolustus</span>
-                  </a>
-                </div>
-                <a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-7">Itsepuolustus</a>
-              </div>
+              <a href="#" class="kmt-info-card" data-bs-toggle="modal" data-bs-target="#project-7" role="button">
+                <img src="img/defence.jpg" class="kmt-info-card-img" alt="Krav Maga itsepuolustus">
+                <span class="kmt-info-card-caption"><i class="fa fa-search-plus" aria-hidden="true"></i>Itsepuolustus</span>
+              </a>
               <!-- Modal -->
               <div class="modal fade" id="project-7" tabindex="-1" role="dialog" aria-labelledby="project-7-label"
                 aria-hidden="true">
@@ -951,11 +883,8 @@
                   <div class="modal-content">
 
                     <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal">
-                        <span aria-hidden="true">&times;</span>
-                        <span class="sr-only">Sulje</span>
-                      </button>
                       <h4 class="modal-title" id="project-7-label">Itsepuolustus</h4>
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Sulje"></button>
                     </div>
                     <div class="modal-body">
                       <h3>Itsepuolustus</h3>
@@ -976,8 +905,8 @@
                           </p>
                         </div>
                         <div class="col-md-6">
-                          <div class="embed-responsive embed-responsive-4by3">
-                            <iframe class="embed-responsive-item embedded-video"
+                          <div class="ratio ratio-4x3">
+                            <iframe class="embedded-video"
                               data-src="https://www.youtube.com/embed/mKelMRJPZ6c" allowfullscreen></iframe>
                           </div>
                           <strong>Krav Magan harjoittelua Pariisin talvileiriltä 2014</strong>
@@ -985,7 +914,7 @@
                       </div>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Sulje</button>
+                      <button type="button" class="btn btn-sm btn-default" data-bs-dismiss="modal">Sulje</button>
                     </div>
                   </div>
                 </div>
@@ -995,16 +924,10 @@
 
             <div class="col-sm-6 col-md-4 isotope-item kravmaga">
 
-              <div class="image-box">
-                <div class="overlay-container">
-                  <img src="img/soldiers.jpg" alt="Sotilas Krav Maga">
-                  <a class="overlay" data-toggle="modal" data-target="#project-8">
-                    <i class="fa fa-search-plus"></i>
-                    <span>Lähitaistelu</span>
-                  </a>
-                </div>
-                <a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-8">Lähitaistelu</a>
-              </div>
+              <a href="#" class="kmt-info-card" data-bs-toggle="modal" data-bs-target="#project-8" role="button">
+                <img src="img/soldiers.jpg" class="kmt-info-card-img" alt="Sotilas Krav Maga">
+                <span class="kmt-info-card-caption"><i class="fa fa-search-plus" aria-hidden="true"></i>Lähitaistelu</span>
+              </a>
               <!-- Modal -->
               <div class="modal fade" id="project-8" tabindex="-1" role="dialog" aria-labelledby="project-8-label"
                 aria-hidden="true">
@@ -1012,11 +935,8 @@
                   <div class="modal-content">
 
                     <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal">
-                        <span aria-hidden="true">&times;</span>
-                        <span class="sr-only">Sulje</span>
-                      </button>
                       <h4 class="modal-title" id="project-8-label">Lähitaistelu</h4>
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Sulje"></button>
                     </div>
                     <div class="modal-body">
                       <h3>Lähitaistelu</h3>
@@ -1047,15 +967,15 @@
                           </p>
                         </div>
                         <div class="col-md-6">
-                          <div class="embed-responsive embed-responsive-4by3">
-                            <iframe class="embed-responsive-item embedded-video"
+                          <div class="ratio ratio-4x3">
+                            <iframe class="embedded-video"
                               data-src="https://www.youtube.com/embed/xK5yue1B1jA" allowfullscreen></iframe>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Sulje</button>
+                      <button type="button" class="btn btn-sm btn-default" data-bs-dismiss="modal">Sulje</button>
                     </div>
                   </div>
                 </div>
@@ -1079,7 +999,7 @@
     <!-- ================ -->
     <div class="footer section">
       <div class="container">
-        <h1 class="title text-center" id="contact">Ota yhteyttä</h1>
+        <h2 class="title text-center" id="contact">Ota yhteyttä</h2>
         <div class="space"></div>
         <div class="row">
           <div class="col-sm-6">
@@ -1095,7 +1015,7 @@
 
               <ul class="list-icons">
                 <li>
-                  <i class="fa fa-map-marker pr-10"></i> Esport Arenan kamppailukeskus
+                  <i class="fa fa-map-marker pr-10" aria-hidden="true"></i> Esport Arenan kamppailukeskus
                   <br />
                   <span style="padding-right: 23px;"></span>
                   Koivu-Mankkaan tie 5
@@ -1103,23 +1023,23 @@
                   <span style="padding-right: 23px;"></span>02200 ESPOO
                 </li>
                 <li>
-                  <i class="fa fa-envelope-o pr-10"></i> info@kravmagatapiola.fi</li>
+                  <i class="fa fa-envelope-o pr-10" aria-hidden="true"></i> info@kravmagatapiola.fi</li>
               </ul>
 
               <ul class="social-links">
                 <li class="instagram">
-                  <a target="_blank" href="https://www.instagram.com/kravmagatapiola">
-                    <i class="fa fa-instagram"></i>
+                  <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/kravmagatapiola" aria-label="Instagram">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
                   </a>
                 </li>
                 <li class="facebook">
-                  <a target="_blank" href="https://www.facebook.com/kravmagatapiola">
-                    <i class="fa fa-facebook"></i>
+                  <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/kravmagatapiola" aria-label="Facebook">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
                   </a>
                 </li>
                 <li class="youtube">
-                  <a target="_blank" href="https://www.youtube.com/channel/UCWsNxh2VXH22bn7sUJbl1BA">
-                    <i class="fa fa-youtube"></i>
+                  <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCWsNxh2VXH22bn7sUJbl1BA" aria-label="YouTube">
+                    <i class="fa fa-youtube" aria-hidden="true"></i>
                   </a>
                 </li>
               </ul>
@@ -1130,7 +1050,7 @@
             <div class="bordered">
               <h3>Kirjautuminen jäsenpalveluun</h3>
               <div class="footer-content">
-                <div class="embed-responsive embed-responsive-4by3">
+                <div class="ratio ratio-4x3">
                   <!-- myClub embed JS - start -->
                   <div class="myclub-embed"
                     data-url="https://kravmaga.myclub.fi/login_embeds/183?token=a6e55d07db527462f07b4e14b76a1483f3b2fed6">
@@ -1138,7 +1058,7 @@
                   <!-- myClub embed JS - end -->
                 </div>
               </div>
-              <div class="space visible-sm-block"></div>
+              <div class="space d-none d-sm-block d-md-none"></div>
             </div>
           </div>
         </div>
@@ -1151,7 +1071,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <p class="text-center">Copyright © 2020 Krav Maga Tapiola ry.</p>
+            <p class="text-center">Copyright © <span id="copy-year">2026</span> Krav Maga Tapiola ry.</p>
           </div>
         </div>
       </div>
@@ -1159,26 +1079,50 @@
     <!-- .subfooter end -->
 
   </footer>
-  <!-- footer end
-  <nav class="navbar navbar-default navbar-fixed-bottom">
-    <div class="container">
-      <div class="navbar-inner navbar-content-center" id="seminar-ad">
-        <p>
-          <strong>Kesäleiri 2020</strong> lähestyy (5.-6.9.2020)! <a href="summercamp">Katso lisätiedot</a>.
-        </p>
+  <!-- footer end -->
+
+  <!-- Cookie / tracking consent banner: gates the Facebook Pixel (see <head>) until the visitor accepts -->
+  <div id="cookie-consent" class="cookie-consent" style="display:none;" role="dialog" aria-label="Evästeasetukset">
+    <div class="cookie-consent-inner">
+      <p>Sivusto käyttää evästeitä kävijäseurantaan (Facebook-pikseli). Hyväksytkö evästeiden käytön?</p>
+      <div class="cookie-consent-actions">
+        <button type="button" id="cookie-consent-accept" class="btn btn-primary btn-sm">Hyväksy</button>
+        <button type="button" id="cookie-consent-decline" class="btn btn-default btn-sm">Hylkää</button>
       </div>
     </div>
-  </nav>
-   -->
+  </div>
+  <script>
+    (function () {
+      var KEY = "kmt-cookie-consent";
+      var stored = null;
+      try { stored = localStorage.getItem(KEY); } catch (e) { /* localStorage unavailable */ }
+      if (stored === "granted") {
+        window.kmtLoadFacebookPixel();
+        return;
+      }
+      if (stored === "denied") { return; }
+      var banner = document.getElementById("cookie-consent");
+      if (!banner) return;
+      banner.style.display = "block";
+      document.getElementById("cookie-consent-accept").addEventListener("click", function () {
+        try { localStorage.setItem(KEY, "granted"); } catch (e) { /* ignore */ }
+        banner.style.display = "none";
+        window.kmtLoadFacebookPixel();
+      });
+      document.getElementById("cookie-consent-decline").addEventListener("click", function () {
+        try { localStorage.setItem(KEY, "denied"); } catch (e) { /* ignore */ }
+        banner.style.display = "none";
+      });
+    })();
+  </script>
+
   <!-- Bootstrap core JavaScript
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-  <script>window.Modernizr || document.write('<script src="js/modernizr.min.js"><\/script>')</script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script>$.fn.modal || document.write('<script src="js/bootstrap.min.js"><\/script>')</script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery-3.7.1.min.js"><\/script>')</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+  <script>window.bootstrap || document.write('<script src="js/bootstrap.min.js"><\/script>')</script>
   <script src="js/plugins/isotope/isotope.pkgd.min.js"></script>
   <script src="js/plugins/jquery.appear.js"></script>
   <script src="js/plugins/light-gallery/lightgallery-all.min.js"></script>
@@ -1186,12 +1130,95 @@
   <script type="application/ld+json">
       {
       "@context": "https://schema.org/",
-      "@type": "LocalBusiness",
+      "@type": "SportsActivityLocation",
       "name": "Krav Maga Tapiola",
       "url": "https://kravmagatapiola.fi",
       "logo": "https://kravmagatapiola.fi/img/logo.png",
-      "address": "Esport Arenan kamppailukeskus, Koivu-Mankkaan tie 5, 02200 ESPOO",
+      "image": "https://kravmagatapiola.fi/img/logo.png",
+      "email": "info@kravmagatapiola.fi",
+      "sport": "Krav Maga",
+      "areaServed": ["Espoo", "Helsingin seutu", "Suomi"],
+      "memberOf": {
+        "@type": "SportsOrganization",
+        "name": "Pohjolan Krav Maga Itsepuolustusliitto (PKMI)",
+        "url": "http://www.krav-maga.fi/"
+      },
+      "sameAs": [
+        "https://www.instagram.com/kravmagatapiola",
+        "https://www.facebook.com/kravmagatapiola",
+        "https://www.youtube.com/channel/UCWsNxh2VXH22bn7sUJbl1BA"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Koivu-Mankkaan tie 5",
+        "addressLocality": "Espoo",
+        "postalCode": "02200",
+        "addressCountry": "FI"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 60.17610442379164,
+        "longitude": 24.779437748482394
+      },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "18:00", "closes": "19:30" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "18:00", "closes": "19:30" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "11:00", "closes": "12:30" }
+      ],
       "parentOrganization": "Pohjolan Krav Maga Itsepuolustusliitto"
+      }
+  </script>
+
+  <!-- Site navigation structured data: mirrors the visible top nav exactly (same labels, same
+       targets). This is only a hint Google may use when/if it decides to show sitelinks under
+       the search result — it does not force sitelinks to appear or dictate their wording. -->
+  <script type="application/ld+json">
+      {
+      "@context": "https://schema.org/",
+      "@type": "SiteNavigationElement",
+      "name": ["Ilmoittaudu!", "Tapahtumat", "Videot", "Krav Maga", "Yhteystiedot"],
+      "url": [
+        "https://kravmagatapiola.fi/#treenit",
+        "https://kravmagatapiola.fi/#tapahtumat",
+        "https://kravmagatapiola.fi/#videos",
+        "https://kravmagatapiola.fi/#information",
+        "https://kravmagatapiola.fi/#contact"
+      ]
+      }
+  </script>
+
+  <!-- FAQ structured data: mirrors the visible accordion Q&A under "Treenit" verbatim,
+       so it can be surfaced directly in search results and by AI answer engines. -->
+  <script type="application/ld+json">
+      {
+      "@context": "https://schema.org/",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Miten aloitan Krav Magan harjoittelun?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vaihda pukuhuoneessa sisäliikuntavaatteet yllesi ja poista korut ja sormukset. Tule peruskurssin aloituspäivänä noin 20 minuuttia ennen treenien alkamista paikalle, jotta paperityöt saadaan tehtyä ajoissa. Jos peruskurssin aloituspäivä on jo mennyt, ota yhteyttä sähköpostilla, jotta voidaan katsoa, ehtisitkö vielä kurssille mukaan. Ota treeneihin mukaan normaali sisäliikuntavarustus ja juomapullo. Esport Arenalla on erinomaiset pukuhuoneet ja suihkutilat."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kuka voi aloittaa Krav Magan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Krav Maga sopii kaikille yli 18-vuotiaille naisille ja miehille. Peruskurssille voi osallistua, vaikka ei olisi aiemmin harrastanut muita kamppailulajeja, eikä pohjakunnon tarvitse olla erityisen hyvä. Aiemmin kamppailulajeja harjoitelleet pääsevät kehittämään teknisiä taitojaan nopeammin. Harjoittelu edellyttää nuhteettomuutta, ja väkivaltarikokseen syyllistyminen on este kurssille osallistumiselle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Onko Krav Magan harjoittelu vaarallista?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Krav Maga -harjoituksissa sattuu harvoin loukkaantumisia, sillä esimerkiksi sparriharjoituksia kovennetaan asteittain harjoitusvuosien karttuessa ja tekniikoita harjoitellaan ensin hitaasti, vasta myöhemmin lisäten nopeutta ja voimaa. Tästä huolimatta itsepuolustuslajit kattavaa tapaturma- tai sairauskuluvakuutusta suositellaan hankittavaksi ennen harjoittelun aloittamista."
+          }
+        }
+      ]
       }
   </script>
 

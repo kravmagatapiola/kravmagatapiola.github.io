@@ -35,7 +35,9 @@
 		//-----------------------------------------------
 		if($(".scrollspy").length>0) {
 			$("body").addClass("scroll-spy");
-			$("body").scrollspy({ 
+			// Bootstrap 5 dropped its jQuery plugin bridge, so ScrollSpy is created via the
+			// vanilla API instead of $("body").scrollspy({...}).
+			new bootstrap.ScrollSpy(document.body, {
 				target: ".scrollspy",
 				offset: 152
 			});
@@ -60,11 +62,13 @@
 
 		// Animations
 		//-----------------------------------------------
-		if (($("[data-animation-effect]").length>0) && !Modernizr.touch) {
+		// Modernizr has been removed; touch and viewport-width detection are done natively instead.
+		var kmtIsTouch = ("ontouchstart" in window) || (navigator.maxTouchPoints > 0);
+		if ($("[data-animation-effect]").length>0) {
 			$("[data-animation-effect]").each(function() {
 				var $this = $(this),
 				animationEffect = $this.attr("data-animation-effect");
-				if(Modernizr.mq("only all and (min-width: 768px)") && Modernizr.csstransitions) {
+				if (!kmtIsTouch && window.matchMedia("(min-width: 768px)").matches) {
 					$this.appear(function() {
 						setTimeout(function() {
 							$this.addClass(`animated object-visible ${animationEffect}`);
@@ -86,6 +90,16 @@
 					layoutMode: "masonry",
 					transitionDuration: "0.6s",
 					filter: "*"
+				});
+				// Isotope measures each item's rendered height up front. If any of its images
+				// are still loading at that point (slow connection, image not yet decoded),
+				// the grid gets laid out too short and items overlap. Re-run layout whenever
+				// one of those images finishes loading so the grid corrects itself.
+				$container.find("img").each(function () {
+					if (this.complete) return;
+					$(this).on("load", function () {
+						$container.isotope("layout");
+					});
 				});
 				// filter items on button click
 				$(".filters").on( "click", "ul.nav li a", function() {
@@ -151,9 +165,19 @@ $(document).ready(function () {
         autoplayFirstVideo: true,
         youtubePlayerParams: { autoplay: 1, modestbranding: 1, showinfo: 0, controls: 0 }
     });
-    $(".modal").on("hidden.bs.modal", function (e) {
-        $(e.target).find("iframe").attr("src", $(e.target).find("iframe").attr("src"));
+    // Bootstrap 5 dispatches native DOM events rather than jQuery events, and jQuery's .on()
+    // can't match a dotted native event type ("hidden.bs.modal") via its namespace mechanism,
+    // so this listens with addEventListener instead (delegated on document since it bubbles).
+    document.addEventListener("hidden.bs.modal", function (e) {
+        var iframe = e.target.querySelector("iframe");
+        if (iframe) {
+            iframe.setAttribute("src", iframe.getAttribute("src"));
+        }
     });
+    var copyYearEl = document.getElementById("copy-year");
+    if (copyYearEl) {
+        copyYearEl.textContent = new Date().getFullYear();
+    }
     $("#fast-map a").on("click", function (e) {
         e.preventDefault();
         const map = $(this).parent();
@@ -174,21 +198,9 @@ function init() {
     }
 }
 window.onload = init;
-(function (i, s, o, g, r, a, m) {
-    i["GoogleAnalyticsObject"] = r;
-    i[r] = i[r] ||
-        function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-    a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-    a.async = 1;
-    a.src = g;
-    m.parentNode.insertBefore(a, m);
-})(window, document, "script", "//www.google-analytics.com/analytics.js", "ga");
-
-ga("create", "UA-66211929-1", "auto");
-ga("send", "pageview");
+// Note: the Universal Analytics snippet that used to live here (UA-66211929-1) was removed —
+// Google shut down Universal Analytics processing in mid-2023, so it was doing nothing but
+// loading a dead script. Set up a GA4 property and add its snippet here if you want analytics.
 
 (function(d, s, id) { var js, mjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.async = true; js.src = "https://d2ubdm6yoox6gh.cloudfront.net/assets/myclub-embed.js"; mjs.parentNode.insertBefore(js, mjs); }(document, 'script', 'myclub-embed-js'));
 			

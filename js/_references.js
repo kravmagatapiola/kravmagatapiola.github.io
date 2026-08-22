@@ -1,5 +1,4 @@
-﻿/// <reference path="modernizr-2.8.3.js" />
-/// <reference path="jquery-3.2.1.js" />
+﻿/// <reference path="jquery-3.7.1.min.js" />
 /// <autosync enabled="true" />
 /// <reference path="app/_run.js" />
 /// <reference path="app/app.datamodel.js" />
